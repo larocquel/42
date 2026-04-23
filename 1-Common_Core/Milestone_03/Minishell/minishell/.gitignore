@@ -1,0 +1,6 @@
+.vscode
+obj/
+*.o
+*.a
+readline.supp
+minishell

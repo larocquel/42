@@ -1,0 +1,45 @@
+body {
+    padding-top: 66px; /* Adjust padding to prevent content from being hidden behind fixed navbar */
+}
+
+/* Main Image */
+.main-image {
+  height: 760px;
+  background-image: url('./img/mainOne.png');
+  background-size: cover;        /* faz a imagem preencher a div */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* evita repetição */
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 10px 5px 5px black;
+}
+
+.main-image-info {
+  padding: 15px;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  box-shadow: 10px 5px 5px black;
+}
+
+h2{
+    align-items: end;
+}
+
+
+/* Profile Card Styles */
+.profile-img {
+    height: 320px;
+    object-fit: cover;
+}
+
+.modal-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skills span {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}

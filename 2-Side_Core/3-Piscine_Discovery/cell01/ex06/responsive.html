@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex 06</title>
+
+	<style>
+		
+	/* PASSO 1: Preparar */
+	html, body
+	{
+		height: 100%;				/* Altura inteira da janela */
+		/*width: 100%;				/* Largura inteira */
+		margin: 0;					/* Remove bordas brancas do navegador */
+		padding: 0;
+	}
+
+	/* PASSO 2: Tabela */
+	table
+	{
+		height: 100%;				/* Largura total */
+		width: 100%;				/* Altura total (herda do body) */
+		border-collapse: collapse;	/* Remove espaços entre células */
+		table-layout: fixed;		/* Calcular tamanhos mais rápido */
+	}
+
+	/* PASSO 3: As Células Flexíveis */
+	td
+	{
+		width: 50%;					/* Cada uma ocupa exatamente metade */
+		text-align: center;			/* Texto no meio horizontal */
+		vertical-align: middle;		/* Texto no meio vertical */
+		border: 1px solid black;
+		word-wrap: break-word;		/* Palavra quebra para caber em poucos pixels */
+    }
+
+	/* PASSO 4: Cores */
+	.caixa-vermelha
+	{
+		background-color: red;
+	}
+
+	.caixa-preta
+	{
+		background-color: black;
+		color: white;
+	}
+
+	</style>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td class="caixa-vermelha">
+				Coxinha melhor
+			</td>
+			<td class="caixa-preta">
+				Croissant pior
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

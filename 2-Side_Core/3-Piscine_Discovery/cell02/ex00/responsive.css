@@ -1,0 +1,39 @@
+/* PASSO 1: Preparar */
+	html, body
+	{
+		height: 100%;				/* Altura inteira da janela */
+		/*width: 100%;				/* Largura inteira */
+		margin: 0;					/* Remove bordas brancas do navegador */
+		padding: 0;
+	}
+
+	/* PASSO 2: Tabela */
+	table
+	{
+		height: 100%;				/* Largura total */
+		width: 100%;				/* Altura total (herda do body) */
+		border-collapse: collapse;	/* Remove espaços entre células */
+		table-layout: fixed;		/* Calcular tamanhos mais rápido */
+	}
+
+	/* PASSO 3: As Células Flexíveis */
+	td
+	{
+		width: 50%;					/* Cada uma ocupa exatamente metade */
+		text-align: center;			/* Texto no meio horizontal */
+		vertical-align: middle;		/* Texto no meio vertical */
+		border: 1px solid black;
+		word-wrap: break-word;		/* Palavra quebra para caber em poucos pixeis */
+    }
+
+	/* PASSO 4: Cores */
+	.caixa-vermelha
+	{
+		background-color: red;
+	}
+
+	.caixa-preta
+	{
+		background-color: black;
+		color: white;
+	}
