@@ -29,19 +29,23 @@ The code is organized to reflect my learning path and milestones at the school:
 
 ```structure
 42/
-├── Common-Core/
-│   ├── Milestone_00/
-│   ├── Milestone_01/
-│   ├── Milestone_02/
-│   ├── Milestone_03/
-│   ├── Milestone_04/
-│   ├── Milestone_05/
-│   └── Milestone_06/
-└── Others/
-    ├── Piscine/
-    ├── Piscine_Reloaded/
-    ├── Piscine_Discovery_Santander/
-    └── Sea:Me/
+├── 1-Common_Core/
+│   ├── Exam/
+│   ├── Milestone_00/
+│   ├── Milestone_01/
+│   ├── Milestone_02/
+│   ├── Milestone_03/
+│   ├── Milestone_04/
+│   ├── Milestone_05/
+│   └── Milestone_06/
+├── 2-Side_Core/
+│   ├── 1-Piscine/
+│   ├── 2-Piscine_Reloaded/
+│   ├── 3-Piscine_Discovery/
+│   └── 4-Sea:Me/
+├── LICENSE.md
+└── README.md
+
 ```
 ---
 
