@@ -34,6 +34,7 @@ t_token	*token_new(t_type type, const char *start, size_t len)
 		tok->value[i] = start[i];
 	tok->value[len] = '\0';
 	tok->type = type;
+	tok->quoted = 0;
 	tok->next = NULL;
 	return (tok);
 }
@@ -53,6 +54,7 @@ t_token	*token_new_owned(t_type type, char *value)
 	}
 	tok->type = type;
 	tok->value = value;
+	tok->quoted = 0;
 	tok->next = NULL;
 	return (tok);
 }

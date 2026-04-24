@@ -67,6 +67,12 @@ static int	fill_cmd_args(t_cmd *cmd, t_token **tok, int *i)
 {
 	if ((*tok)->type == WORD)
 	{
+		if ((*tok)->value && (*tok)->value[0] == '\0'
+			&& (*tok)->quoted == 0)
+		{
+			*tok = (*tok)->next;
+			return (1);
+		}
 		cmd->argv[(*i)++] = ft_strdup((*tok)->value);
 		if (!cmd->argv[*i - 1])
 			return (0);

@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:31:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2025/07/07 17:53:58 by leoaguia         ###   ########.fr       */
+/*   Updated: 2025/08/04 18:43:34 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ int	ft_open(char *map, t_game *game)
 		return (close(game->fd), ft_putstr_fd(NO_FILE, 2),
 			ft_putstr_fd(map, 2), ft_putstr_fd("\n", 2), 0);
 	if (!valid_format(map))
-		return (close(game->fd), ft_putstr_fd(FORMAT_ERROR, 2), 0);
+	{
+		close(game->fd);
+		ft_putstr_fd(FORMAT_ERROR, 2);
+		exit(1);
+	}
 	return (game->fd);
 }
 

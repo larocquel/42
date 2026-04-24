@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lexer.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davmendo <davmendo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:27:23 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/01/12 18:58:14 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/01/20 20:10:42 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,29 +47,47 @@ static int	is_word_end(char c, int sq, int dq)
 /*
 Reads a complete word respecting quotes.
 */
-static t_token	*read_word(const char *line, size_t *i)
+static int	scan_word_end(const char *line, size_t *i, int *had_quotes)
 {
-	size_t	start;
-	int		qs[2];
-	char	*val;
+	int	qs[2];
 
-	start = *i;
 	qs[0] = 0;
 	qs[1] = 0;
+	*had_quotes = 0;
 	while (line[*i])
 	{
 		if (line[*i] == '\'' && !qs[1])
+		{
 			qs[0] = !qs[0];
+			*had_quotes = 1;
+		}
 		else if (line[*i] == '\"' && !qs[0])
+		{
 			qs[1] = !qs[1];
+			*had_quotes = 1;
+		}
 		else if (is_word_end(line[*i], qs[0], qs[1]))
 			break ;
 		(*i)++;
 	}
-	if (qs[0] || qs[1])
+	return (!(qs[0] || qs[1]));
+}
+
+static t_token	*read_word(const char *line, size_t *i)
+{
+	size_t	start;
+	int		had_quotes;
+	char	*val;
+	t_token	*tok;
+
+	start = *i;
+	if (!scan_word_end(line, i, &had_quotes))
 		return (printf("Minishell: unclosed quotes\n"), NULL);
 	val = ft_substr(line, start, *i - start);
-	return (token_new_owned(WORD, val));
+	tok = token_new_owned(WORD, val);
+	if (tok)
+		tok->quoted = had_quotes;
+	return (tok);
 }
 
 /*

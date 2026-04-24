@@ -6,7 +6,7 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/15 19:45:23 by leoaguia          #+#    #+#              #
-#    Updated: 2025/05/16 18:53:12 by leoaguia         ###   ########.fr        #
+#    Updated: 2025/05/22 22:39:50 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                             NAMES OF THE EXECUTABLES                         #
 #******************************************************************************#
 
-NAME_PUSH_SWAP = push_swap
+NAME           = push_swap
 NAME_BONUS     = checker
 
 #******************************************************************************#
@@ -66,10 +66,10 @@ LIBFT        = $(LIBFT_DIR)/libft.a
 #                                  BUILD TARGETS                               #
 #******************************************************************************#
 
-all: $(NAME_PUSH_SWAP)
+all: $(NAME)
 
-$(NAME_PUSH_SWAP): $(SRCS_OBJ) $(MAIN_OBJ) $(LIBFT)
-	$(CC) $(FLAGS) -I $(INCLUDES) $(SRCS_OBJ) $(MAIN_OBJ) -L $(LIBFT_DIR) -lft -o $(NAME_PUSH_SWAP)
+$(NAME): $(SRCS_OBJ) $(MAIN_OBJ) $(LIBFT)
+	$(CC) $(FLAGS) -I $(INCLUDES) $(SRCS_OBJ) $(MAIN_OBJ) -L $(LIBFT_DIR) -lft -o $(NAME)
 
 bonus: $(NAME_BONUS)
 
@@ -95,11 +95,10 @@ clean:
 	make clean -C $(LIBFT_DIR)
 
 fclean: clean
-	rm -rf $(NAME_PUSH_SWAP) $(NAME_BONUS)
+	rm -rf $(NAME) $(NAME_BONUS)
 	make fclean -C $(LIBFT_DIR)
 
 re: fclean
 		make all
-		make bonus
 
 .PHONY: all clean fclean re bonus

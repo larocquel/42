@@ -65,7 +65,10 @@ size_t	count_words_until_pipe(t_token *tok)
 	while (tok && tok->type != PIPE)
 	{
 		if (tok->type == WORD)
-			count++;
+		{
+			if (!(tok->value && tok->value[0] == '\0' && tok->quoted == 0))
+				count++;
+		}
 		else if (tok->type != PIPE)
 		{
 			if (tok->next)

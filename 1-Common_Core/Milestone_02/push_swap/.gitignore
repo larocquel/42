@@ -2,5 +2,6 @@ push_swap
 *.o
 *.a
 .*.swp
+.vscode
 checker
 checker_linux

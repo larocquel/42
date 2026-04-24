@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtins_ops.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davmendo <davmendo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 21:57:37 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/01/19 21:01:11 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/01/20 22:07:24 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ int	ft_cd(t_shell *sh, t_cmd *cmd)
 {
 	char	old_pwd[4096];
 	char	*path;
+	int		argc;
 
-	if (cmd->argv[1])
+	argc = 0;
+	while (cmd->argv && cmd->argv[argc])
+		argc++;
+	if (argc > 2)
 		return (ft_putendl_fd("minishell: cd: too many arguments", 2), 1);
 	if (!getcwd(old_pwd, 4096))
 		old_pwd[0] = '\0';
@@ -33,11 +37,7 @@ int	ft_cd(t_shell *sh, t_cmd *cmd)
 	else
 		path = cmd->argv[1];
 	if (chdir(path) != 0)
-	{
-		ft_putstr_fd("minishell: cd: ", 2);
-		perror(path);
-		return (1);
-	}
+		return (ft_putstr_fd("minishell: cd: ", 2), perror(path), 1);
 	update_wd_env(sh, old_pwd);
 	return (0);
 }
