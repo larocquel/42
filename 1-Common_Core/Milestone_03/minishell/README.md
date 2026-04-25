@@ -1,14 +1,10 @@
 *This project has been created as part of the 42 curriculum by leoaguia and davmendo.*
 
----
-
 <div align="center">
-  <img src="https://github.com/larocquel/42_Minishell/raw/8b3675abd4a1d697e092bb5e8cfa6b3f18516db0/img/minishell_banner.png" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/eecd9994262309507b9b6bbb8341b7f3c70d421a/1-Common_Core/Milestone_03/minishell/img/minishell_banner.png" width="100%" />
 </div>
 
 > "Creating a shell is the closest you can get to talking directly to the Kernel."
-
----
 
 ## ⚒ Builders
 
@@ -20,8 +16,6 @@
 **[David Mendonça](https://github.com/davmendo)**
 <br><br/>
 
----
-
 ## ⤷ Content
 
 1. [Preview](#preview)
@@ -32,14 +26,10 @@
 6. [Concepts](#concepts)
 7. [Special Thanks](#special-thanks)
 
----
-
 ## <a id="preview"></a>📽 Preview
 <div align="center">
-  <img src="https://github.com/larocquel/42_Minishell/raw/4a4ee57c95f877e1749bc15b33e949bed37880f6/img/minishell_demo.gif" alt="Demo" width="1000" />
+  <img src="https://github.com/larocquel/42/raw/633b3494a3932950e3d432f470477dec97aec413/1-Common_Core/Milestone_03/minishell/img/minishell_demo.gif" alt="Demo" width="1000" />
 </div>
-
----
 
 ## <a id="description"></a>🖳 Description
 
@@ -51,8 +41,6 @@ Our goal was to create a robust shell that handles:
 - Managing `pipes` (`|`) and `redirections` (`<`, `>`, `<<`, `>>`).
 - `Executing` `binaries` and `builtins`.
 - Handling `signals` behaving exactly like `Bash`.
-
----
 
 ## <a id="instructions"></a>⬇ Instructions
 
@@ -107,8 +95,6 @@ valgrind --leak-check=full --show-leak-kinds=all --suppressions=readline.supp ./
 
 ```
 
----
-
 ## <a id="resources"></a>🕮 Resources
 
 ### References
@@ -125,8 +111,6 @@ This project utilized Artificial Intelligence tools (specifically Gemini) to sup
 
 * **Documentation & Design:** Generating the pixel-art banners, creating the visual diagrams for data structures (Linked List vs. BST), and structuring this `README.md` to ensure clarity and professional formatting.
 * *Note: The core logic, algorithms, and Norminette-compliant C code were implemented entirely by the authors without AI code generation.*
-
----
 
 ## <a id="skeleton"></a>☠ Skeleton
 
@@ -149,8 +133,6 @@ minishell/
 └── README.md           # This beauty
 
 ```
-
----
 
 ## <a id="concepts"></a>🗝 Concepts
 
@@ -189,7 +171,7 @@ The heart of Minishell relies on the interaction between three system calls that
 * **`execve()` - The Transformation:**
     This is the point of no return. Once the child process is set up (pipes connected, signals handled), `execve()` is called. It replaces the current process memory with the new binary (e.g., `/bin/ls`). If successful, the child process ceases to be a copy of the shell and becomes the new program.
 
----
+
 
 ## <a id="special-thanks"></a>♡ Special Thanks
 
