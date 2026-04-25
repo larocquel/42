@@ -3,7 +3,7 @@
 ---
 
 <div align="center">
-  <img src="https://github.com/larocquel/42_Philosophers/raw/cbb5399b2043ce8829a912a2cd51e5b4fb77cb75/img/philosophers_banner.png" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/eecd9994262309507b9b6bbb8341b7f3c70d421a/1-Common_Core/Milestone_03/philosophers/img/philosophers_banner.png" width="100%" />
 </div>
 
 > "I never thought philosophy would be so deadly."
