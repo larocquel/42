@@ -143,10 +143,10 @@ minishell/
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/larocquel/42_Minishell/raw/600c268c06b5b3884988aa797029e24a4a289e34/img/linked_list.png" width="100%" />
+      <img src="https://github.com/larocquel/42/raw/744c737a414e04a13fc5f225abb6c0f6ce1c2e50/1-Common_Core/Milestone_03/minishell/img/linked_list.png" width="100%" />
     </td>
     <td>
-      <img src="https://github.com/larocquel/42_Minishell/raw/600c268c06b5b3884988aa797029e24a4a289e34/img/binary_tree.png" width="100%" />
+      <img src="https://github.com/larocquel/42/raw/744c737a414e04a13fc5f225abb6c0f6ce1c2e50/1-Common_Core/Milestone_03/minishell/img/binary_tree.png" width="100%" />
     </td>
   </tr>
 </table>
