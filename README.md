@@ -47,7 +47,7 @@ This repository is a **monorepo** that consolidates all projects developed by me
 ### Milestone 4
 [![cub3d](PNG_URL_CUB3D)](FOLDER_LINK_CUB3D)
 [![netPractice](PNG_URL_NETPRACTICE)](FOLDER_LINK_NETPRACTICE)
-[![cpp](PNG_URL_CPP)](FOLDER_LINK_CPP)
+[![cpp](PNG_URL_CPP)](https://github.com/larocquel/42/tree/7d4f22988b7a14f284f99a08ef4c4af77c9f0b37/1-Common_Core/Milestone_04/cpp)
 
 ### Milestone 5
 [![Inception](PNG_URL_INCEPTION)](FOLDER_LINK_INCEPTION)
