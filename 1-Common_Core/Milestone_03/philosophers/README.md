@@ -1,14 +1,8 @@
 *This project has been created as part of the 42 curriculum by leoaguia.*
 
----
-
 <div align="center">
   <img src="https://github.com/larocquel/42/raw/eecd9994262309507b9b6bbb8341b7f3c70d421a/1-Common_Core/Milestone_03/philosophers/img/philosophers_banner.png" width="100%" />
 </div>
-
-> "I never thought philosophy would be so deadly."
-
----
 
 ## ⚒ Creator
 
@@ -20,8 +14,6 @@
   <b><a href="https://github.com/larocquel">Leonardo La Rocque</a></b>
 </div>
 
----
-
 ## ⤷ Content
 
 1. [Description](#description)
@@ -31,8 +23,6 @@
 5. [Concepts](#concepts)
 6. [Applications](#applications)
 7. [Special Thanks](#special-thanks)
-
----
 
 ## <a id="description"></a>🖳 Description
 
@@ -45,12 +35,9 @@ The goal was to create a robust simulation that prevents philosophers from starv
 - Implementing precise `micro-sleep` routines to track time accurately.
 - Developing algorithms to prevent `deadlocks` and `starvation`.
 
----
 <div align="center">
-  <img src="https://github.com/larocquel/42_Philosophers/raw/21ee55e0211a4ab792caebb0ad56cbbd7acd808c/img/philosophers.gif" alt="Demo" width="1000" height="500"/>
+  <img src="https://github.com/larocquel/42/raw/6bf5d7e048ff578757036eff538055fe405e9527/1-Common_Core/Milestone_03/philosophers/img/philosophers.gif" alt="Demo" width="1000" height="500"/>
 </div>
-
----
 
 ## <a id="instructions"></a>⬇ Instructions
 
@@ -122,8 +109,6 @@ setarch $(uname -m) -R valgrind --leak-check=full ./philo 5 800 200 200 7
 
 ```
 
----
-
 ## <a id="resources"></a>🕮 Resources
 
 ### References
@@ -137,8 +122,6 @@ This project utilized Artificial Intelligence tools (specifically Gemini) to sup
 
 * **Mentorship & Logic Validation:** Acting as a mentor to explain the mathematical logic behind starvation and to identify C operator precedence traps.
 * **Documentation & Design:** Generating visual concepts, formatting this `README.md`, and structuring the repository to industry standards.
-
----
 
 ## <a id="skeleton"></a>☠ Skeleton
 
@@ -158,8 +141,6 @@ philo/
 └── README.md           # Here we are!
 
 ```
-
----
 
 ## <a id="concepts"></a>🗝 Concepts
 
@@ -183,13 +164,9 @@ A `Mutex` acts as a digital "lock" that ensures only one thread can access a spe
 
 * ### Deadlocks and Starvation
 
-
-
 A `Deadlock` occurs when a circular wait freezes the system—for example, if every philosopher picks up their right fork and waits forever for the left one to be free.
 
 `Starvation`, on the other hand, is when a philosopher never gets to eat because their neighbors are constantly using the forks. This project uses resource hierarchy (even/odd picking) and dynamic timing to ensure the "traffic" at the table never jams and every philosopher gets a turn to eat.
-
----
 
 ## <a id="applications"></a>🗺 Applications
 
@@ -198,8 +175,6 @@ While the Dining Philosophers is a theoretical analogy, these concepts form the 
 * **Banking Systems:** Rely strictly on `mutexes` to ensure simultaneous transactions don't overwrite the same account balance, preventing catastrophic data corruption.
 * **Web Servers & Databases:** Heavily use `multithreading` and `concurrency` to handle thousands of user requests at the exact same time without freezing the application.
 * **Operating Systems & Game Engines:** Actively prevent `deadlocks` and `starvation` to efficiently manage CPU, GPU, and memory resources, ensuring your computer remains responsive and crash-free.
-
----
 
 ## <a id="special-thanks"></a>♡ Special Thanks
 
