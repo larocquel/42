@@ -29,20 +29,20 @@ This repository is a **monorepo** that consolidates all projects developed by me
 > Click on the images to access the source code and documentation of each project.
 
 ### Milestone 0
-[![libft](PNG_URL_LIBFT)](FOLDER_LINK_LIBFT)
+[![libft](PNG_URL_LIBFT)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_00/libft)
 
 ### Milestone 1
-[![ft_printf](PNG_URL_PRINTF)](FOLDER_LINK_PRINTF)
-[![get_next_line](PNG_URL_GNL)](FOLDER_LINK_GNL)
+[![ft_printf](PNG_URL_PRINTF)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_01/ft_printf)
+[![get_next_line](PNG_URL_GNL)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_01/get_next_line)
 
 ### Milestone 2
-[![so_long](PNG_URL_SOLONG)](FOLDER_LINK_SOLONG)
-[![push_swap](PNG_URL_PUSHSWAP)](FOLDER_LINK_PUSHSWAP)
-[![minitalk](PNG_URL_MINITALK)](FOLDER_LINK_MINITALK)
+[![so_long](PNG_URL_SOLONG)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/so_long)
+[![push_swap](PNG_URL_PUSHSWAP)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/push_swap)
+[![minitalk](PNG_URL_MINITALK)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/minitalk)
 
 ### Milestone 3
-[![minishell](PNG_URL_MINISHELL)](FOLDER_LINK_MINISHELL)
-[![philosophers](PNG_URL_PHILOS)](FOLDER_LINK_PHILOS)
+[![minishell](PNG_URL_MINISHELL)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_03/minishell)
+[![philosophers](PNG_URL_PHILOS)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_03/philosophers)
 
 ### Milestone 4
 [![cub3d](PNG_URL_CUB3D)](FOLDER_LINK_CUB3D)
