@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/23 04:34:52 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/26 20:40:56 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 PhoneBook::PhoneBook(void)
 {
 	_index = 0;
+	_size = 0;
 	std::cout << "My Awesome PhoneBook contructed!" << std::endl;
 }
 
@@ -49,8 +50,11 @@ void	PhoneBook::add(void)
 
 	// 3. Atualizar o _index para que o próximo contato vá para a gaveta seguinte.
 	_index++;
+	_size++;
 	if (_index == 8)
 		_index = 0;
+	if (_size == 9)
+		_size = 8;
 }
 
 void	PhoneBook::search(void)
@@ -65,7 +69,7 @@ void	PhoneBook::search(void)
 	std::string	nickname;
 
 
-	for (int i = 0; i < _index; i++)
+	for (int i = 0; i < _size; i++)
 	{
 		// index
 		std::cout << '|';
@@ -79,9 +83,9 @@ void	PhoneBook::search(void)
 		len = firstname.length();
 		if (len < 10)
 		{
-			std::cout << firstname;
 			for (int space = 10; space > len; space--)
 				std::cout << '*';
+			std::cout << firstname;
 		}
 		else
 		{
@@ -96,9 +100,9 @@ void	PhoneBook::search(void)
 		len = lastname.length();
 		if (len < 10)
 		{
-			std::cout << lastname;
 			for (int space = 10; space > len; space--)
 				std::cout << '*';
+			std::cout << lastname;
 		}
 		else
 		{
@@ -113,9 +117,9 @@ void	PhoneBook::search(void)
 		len = nickname.length();
 		if (len < 10)
 		{
-			std::cout << nickname;
 			for (int space = 10; space > len; space--)
 				std::cout << '*';
+			std::cout << nickname;
 		}
 		else
 		{
@@ -125,7 +129,6 @@ void	PhoneBook::search(void)
 		}
 		std::cout << '|' << std::endl;
 	}
-	std::cout << "_index: " << _index << std::endl;
 
 	// 2. Prompt for index and deal with out of range (reprompt?)
 
