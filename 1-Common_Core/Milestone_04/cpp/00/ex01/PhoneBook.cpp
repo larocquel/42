@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/28 02:17:42 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/28 03:52:27 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ PhoneBook::PhoneBook(void)
 
 void	PhoneBook::print_index(int index)
 {
-	std::cout << '|' << std::setw(10) << index << '|';
+	std::cout << '|' << std::right << std::setw(10) << index << '|';
 }
 
 void	PhoneBook::print_table(std::string text)
@@ -30,7 +30,7 @@ void	PhoneBook::print_table(std::string text)
 
 	if (len < 10)
 	{
-		std::cout << std::setw(10) << text;
+		std::cout << std::right << std::setw(10) << text;
 	}
 	else
 	{
@@ -48,54 +48,41 @@ void	PhoneBook::print_contact(int index)
 	std::cout << "D. Secret  : " << _phonebook[index].GetDarkestSecret() << std::endl;
 }
 
+std::string	PhoneBook::scan_input(std::string prompt)
+{
+	std::string	input = "";
+
+	while(input.empty())
+	{
+		std::cout << std::left << std::setw(15) << prompt << ": ";
+		std::getline(std::cin, input);
+	}
+	return (input);
+}
+
 
 void	PhoneBook::add(void)
 {
 	std::string	input;
 
 	// FIRSTNAME
-	input = "";
-	while (input.empty())
-	{
-		std::cout << "Firstname      : ";
-		std::getline(std::cin, input);
-	}
+	input = scan_input("First Name");
 	_phonebook[_index].SetFirstName(input);
 
 	// LASTNAME
-	input = "";
-	while(input.empty())
-	{
-		std::cout << "Lastname       : ";
-		std::getline(std::cin, input);
-	}
+	input = scan_input("Last Name");
 	_phonebook[_index].SetLastName(input);
 
 	// NICKNAME
-	input = "";
-	while(input.empty())
-	{
-		std::cout << "Nickname       : ";
-		std::getline(std::cin, input);
-	}
+	input = scan_input("Nickname");
 	_phonebook[_index].SetNickName(input);
 
 	// PHONENUMBER
-	input = "";
-	while(input.empty())
-	{
-		std::cout << "Phonenumber    : ";
-		std::getline(std::cin, input);
-	}
+	input = scan_input("Phonenumber");
 	_phonebook[_index].SetPhoneNumber(input);
 
 	// DARKEST SECRET
-	input = "";
-	while(input.empty())
-	{
-		std::cout << "Darkest Secret : ";
-		std::getline(std::cin, input);
-	}
+	input = scan_input("Darkest Secret");
 	_phonebook[_index].SetDarkestSecret(input);
 
 	_index++;
@@ -139,7 +126,7 @@ void	PhoneBook::search(void)
 
 		std::cout << std::endl;
 	}
-	
+
 	std::string	index;
 	while (true)
 	{

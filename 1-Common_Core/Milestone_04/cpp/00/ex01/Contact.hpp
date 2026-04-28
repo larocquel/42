@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 21:49:25 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/28 02:11:21 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/28 02:56:31 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Contact
 		void		SetPhoneNumber(std::string phonenumber);
 		void		SetDarkestSecret(std::string darkestsecret);
 
-		std::string GetFirstName(void)		const; // Duvida: Pq const?
+		std::string GetFirstName(void)		const;
 		std::string GetLastName(void)		const;
 		std::string GetNickName(void)		const;
 		std::string GetPhoneNumber(void)	const;
