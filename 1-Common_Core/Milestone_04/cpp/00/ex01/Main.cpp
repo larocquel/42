@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 02:55:05 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/23 03:00:38 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/28 02:19:19 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	while (command != "EXIT")
 	{
 		std::cout << "Type a command (ADD, SEARCH or EXIT):" << std::endl;
-		std::cin >> command;
+		std::getline(std::cin, command);
 		if (command == "ADD")
 			object.add();
 		else if (command == "SEARCH")

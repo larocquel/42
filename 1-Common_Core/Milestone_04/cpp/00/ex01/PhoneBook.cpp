@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/27 20:47:43 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/28 02:17:42 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "My Awesome PhoneBook contructed!" << std::endl;
+	std::cout << "My Awesome PhoneBook constructed!" << std::endl;
 	_index = 0;
 	_size = 0;
 }
@@ -30,32 +30,22 @@ void	PhoneBook::print_table(std::string text)
 
 	if (len < 10)
 	{
-		for (int space = 10; space > len; space--)
-			std::cout << '*';
-		std::cout << text;
+		std::cout << std::setw(10) << text;
 	}
 	else
 	{
-		for (int letter = 0; letter < 9; letter++)
-			std::cout << text[letter];
-		std::cout << '.';
+		std::cout << text.substr(0, 9) << '.';
 	}
 	std::cout << '|';
 }
 
 void	PhoneBook::print_contact(int index)
 {
-	std::string	firstname = _phonebook[index].GetFirstName();
-	std::string	lastname = _phonebook[index].GetLastName();
-	std::string	nickname = _phonebook[index].GetNickName();
-	std::string	phonenumber = _phonebook[index].GetPhoneNumber();
-	std::string	darkestsecret = _phonebook[index].GetDarkestSecret();
-
-	std::cout << "First Name : " << firstname << std::endl;
-	std::cout << "Last Name  : " << lastname << std::endl;
-	std::cout << "Nickname   : " << nickname << std::endl;
-	std::cout << "Phonenumber: " << phonenumber << std::endl;
-	std::cout << "D. Secret  : " << darkestsecret << std::endl;
+	std::cout << "First Name : " << _phonebook[index].GetFirstName() << std::endl;
+	std::cout << "Last Name  : " << _phonebook[index].GetLastName() << std::endl;
+	std::cout << "Nickname   : " << _phonebook[index].GetNickName() << std::endl;
+	std::cout << "Phonenumber: " << _phonebook[index].GetPhoneNumber() << std::endl;
+	std::cout << "D. Secret  : " << _phonebook[index].GetDarkestSecret() << std::endl;
 }
 
 
@@ -63,31 +53,51 @@ void	PhoneBook::add(void)
 {
 	std::string	input;
 
-	// 1. Ler os 5 dados do usuário usando std::cin.
-	std::cout << "Firstname      : ";
-	std::cin >> input;
-	// 2. Salvar esses dados na "ficha de papel" (objeto Contact) correta dentro do array _phonebook, usando os setters
+	// FIRSTNAME
+	input = "";
+	while (input.empty())
+	{
+		std::cout << "Firstname      : ";
+		std::getline(std::cin, input);
+	}
 	_phonebook[_index].SetFirstName(input);
 
-	std::cout << "Lastname       : ";
-	std::cin >>  input;
+	// LASTNAME
+	input = "";
+	while(input.empty())
+	{
+		std::cout << "Lastname       : ";
+		std::getline(std::cin, input);
+	}
 	_phonebook[_index].SetLastName(input);
 
-	std::cout << "Nickname       : ";
-	std::cin >> input;
+	// NICKNAME
+	input = "";
+	while(input.empty())
+	{
+		std::cout << "Nickname       : ";
+		std::getline(std::cin, input);
+	}
 	_phonebook[_index].SetNickName(input);
 
-	std::cout << "Phonenumber    : ";
-	std::cin >> input;
+	// PHONENUMBER
+	input = "";
+	while(input.empty())
+	{
+		std::cout << "Phonenumber    : ";
+		std::getline(std::cin, input);
+	}
 	_phonebook[_index].SetPhoneNumber(input);
 
-
-	std::cout << "Darkest Secret : ";
-	std::cin >> input;
+	// DARKEST SECRET
+	input = "";
+	while(input.empty())
+	{
+		std::cout << "Darkest Secret : ";
+		std::getline(std::cin, input);
+	}
 	_phonebook[_index].SetDarkestSecret(input);
 
-
-	// 3. Atualizar o _index para que o próximo contato vá para a gaveta seguinte.
 	_index++;
 	_size++;
 	if (_index == 8)
@@ -98,7 +108,6 @@ void	PhoneBook::add(void)
 
 void	PhoneBook::search(void)
 {
-	// 1. Lista de 4 colunas
 	std::string	firstname;
 	std::string	lastname;
 	std::string	nickname;
@@ -130,18 +139,15 @@ void	PhoneBook::search(void)
 
 		std::cout << std::endl;
 	}
-
-	// 2. Prompt for index and deal with out of range (reprompt?)
-	std::string	index_str;
-	int			index_int;
+	
+	std::string	index;
 	while (true)
 	{
 		std::cout << "index: ";
-		std::cin >> index_str;
-		index_int = index_str[0] - '0';
-		if (index_str.length() == 1 && (index_int >= 0 && index_int < _size))
+		std::getline(std::cin, index);
+		if (index.length() == 1 && (index[0] - '0' >= 0 && index[0] - '0' < _size))
 		{
-			print_contact(index_int);
+			print_contact(index[0] - '0');
 			break;
 		}
 		else
@@ -149,6 +155,4 @@ void	PhoneBook::search(void)
 			std::cout << "Out of range. Try again!" << std::endl;
 		}
 	}
-
-	// 3. IOMANIP (Input/Output manipulation?)
 }

@@ -6,11 +6,13 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 21:48:37 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/18 17:52:01 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/28 02:14:26 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+// Duvida: Me explique melhor o que são setters e getter e pq utilizalos dessa maneira?
 
 // FirstName
 
