@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/28 03:52:27 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/04/29 02:15:09 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "My Awesome PhoneBook constructed!" << std::endl;
+	std::cout << "\n|      My Awesome PhoneBook constructed      |" << std::endl;
 	_index = 0;
 	_size = 0;
 }
@@ -101,11 +101,11 @@ void	PhoneBook::search(void)
 
 	if (_size == 0)
 	{
-		std::cout << "Empty phonebook. Try adding before searching!" << std::endl;
+		std::cout << "Error: Empty phonebook. Try adding before searching!" << std::endl;
 		return ;
 	}
 
-	std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
+	std::cout << "|     Index|First Nam.| Last Name|  Nickname|" << std::endl;
 
 	for (int i = 0; i < _size; i++)
 	{
@@ -130,8 +130,9 @@ void	PhoneBook::search(void)
 	std::string	index;
 	while (true)
 	{
-		std::cout << "index: ";
+		std::cout << "\nindex: ";
 		std::getline(std::cin, index);
+		std::cout << "\n";
 		if (index.length() == 1 && (index[0] - '0' >= 0 && index[0] - '0' < _size))
 		{
 			print_contact(index[0] - '0');
@@ -139,7 +140,7 @@ void	PhoneBook::search(void)
 		}
 		else
 		{
-			std::cout << "Out of range. Try again!" << std::endl;
+			std::cout << "Error: Out of range. Try again!" << std::endl;
 		}
 	}
 }
