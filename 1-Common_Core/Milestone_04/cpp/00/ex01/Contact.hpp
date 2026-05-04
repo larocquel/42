@@ -6,9 +6,12 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 21:49:25 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/29 01:23:00 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 18:51:00 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>	// std::cout << , std::cin >>
 #include <iomanip>	// std::setw()
@@ -36,3 +39,5 @@ class Contact
 		std::string GetPhoneNumber(void)	const;
 		std::string GetDarkestSecret(void)	const;
 };
+
+#endif

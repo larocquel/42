@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 02:55:05 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/29 01:45:21 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 21:59:19 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ int	main(void)
 	while (cmd != "EXIT")
 	{
 		std::cout << "\nType a command (ADD, SEARCH or EXIT): ";
-		std::getline(std::cin, cmd);
+		if (!std::getline(std::cin, cmd) || std::cin.eof())
+		{
+			std::cout << "\nEOF detected. Exiting..." << std::endl;
+			exit(0);
+		}
 		std::cout << "\n";
 		std::transform(cmd.begin(), cmd.end(), cmd.begin(), ::toupper);
 		if (cmd == "ADD")

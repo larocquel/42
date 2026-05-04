@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/11 03:13:49 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/12 21:03:37 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 18:40:00 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Learned concepts:
 */
 int	main(int ac, char **av)
 {
-	if (ac < 2)
+	if (ac <= 1)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
@@ -40,6 +40,7 @@ int	main(int ac, char **av)
 		{
 			std::cout << static_cast<char>(toupper(av[i][j]));
 		}
+		std::cout << " ";
 	}
 	std::cout << std::endl;
 	return (0);

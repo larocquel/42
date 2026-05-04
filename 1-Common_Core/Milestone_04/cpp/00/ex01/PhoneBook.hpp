@@ -6,11 +6,16 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:53 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/28 03:30:00 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 18:51:39 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+
 #include "Contact.hpp"
+
+/* Auxiliar Method: (Every aux. met. is declared as private)*/
 
 class	PhoneBook
 {
@@ -28,3 +33,5 @@ class	PhoneBook
 	void	add(void);
 	void	search(void);
 };
+
+#endif

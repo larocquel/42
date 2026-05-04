@@ -6,12 +6,13 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/04/29 02:15:09 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 22:01:11 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+/* Constructor: Behave as an init() C-like function, it is called when an object is instantiated*/
 PhoneBook::PhoneBook(void)
 {
 	std::cout << "\n|      My Awesome PhoneBook constructed      |" << std::endl;
@@ -19,11 +20,13 @@ PhoneBook::PhoneBook(void)
 	_size = 0;
 }
 
+/* Auxiliar Method: Used to print the index in the formated form*/
 void	PhoneBook::print_index(int index)
 {
 	std::cout << '|' << std::right << std::setw(10) << index << '|';
 }
 
+/* Auxiliar Method: Used to print the content passed in the formated form*/
 void	PhoneBook::print_table(std::string text)
 {
 	int	len = text.length();
@@ -39,6 +42,7 @@ void	PhoneBook::print_table(std::string text)
 	std::cout << '|';
 }
 
+/* Auxiliar Method: Used to print the information stored in each contact of the class passed in the formated form*/
 void	PhoneBook::print_contact(int index)
 {
 	std::cout << "First Name : " << _phonebook[index].GetFirstName() << std::endl;
@@ -48,6 +52,7 @@ void	PhoneBook::print_contact(int index)
 	std::cout << "D. Secret  : " << _phonebook[index].GetDarkestSecret() << std::endl;
 }
 
+/* Auxiliar Method: Used to prompt the user for the information until he type anything acceptable*/
 std::string	PhoneBook::scan_input(std::string prompt)
 {
 	std::string	input = "";
@@ -55,12 +60,16 @@ std::string	PhoneBook::scan_input(std::string prompt)
 	while(input.empty())
 	{
 		std::cout << std::left << std::setw(15) << prompt << ": ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input) || std::cin.eof())
+		{
+			std::cout << "\nEOF detected. Exiting..." << std::endl;
+			exit(0);
+		}
 	}
 	return (input);
 }
 
-
+/* Command Method: Used to add a contact to the PhoneBook*/
 void	PhoneBook::add(void)
 {
 	std::string	input;
@@ -93,6 +102,7 @@ void	PhoneBook::add(void)
 		_size = 8;
 }
 
+/* Command Method: Used to print the table if already exist and let the user choose any contact to access all the info even the hidden ones*/
 void	PhoneBook::search(void)
 {
 	std::string	firstname;
