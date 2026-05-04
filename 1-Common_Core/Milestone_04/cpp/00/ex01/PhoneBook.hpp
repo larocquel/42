@@ -6,16 +6,19 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:53 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/04 18:51:39 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 22:41:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+OBS:
+- Auxiliar Methods: Every aux. met. are declared as private
+*/
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
-
-/* Auxiliar Method: (Every aux. met. is declared as private)*/
 
 class	PhoneBook
 {

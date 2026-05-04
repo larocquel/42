@@ -6,13 +6,15 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/04 22:01:11 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 22:39:40 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-/* Constructor: Behave as an init() C-like function, it is called when an object is instantiated*/
+/* Constructor: PHONEBOOK
+- Behave as an init() C-like function, it is called when an object is instantiated
+*/
 PhoneBook::PhoneBook(void)
 {
 	std::cout << "\n|      My Awesome PhoneBook constructed      |" << std::endl;
@@ -20,13 +22,18 @@ PhoneBook::PhoneBook(void)
 	_size = 0;
 }
 
-/* Auxiliar Method: Used to print the index in the formated form*/
+/*
+Auxiliar Method: PRINT_INDEX
+- Formats and prints a single table cell for the index.
+*/
 void	PhoneBook::print_index(int index)
 {
 	std::cout << '|' << std::right << std::setw(10) << index << '|';
 }
 
-/* Auxiliar Method: Used to print the content passed in the formated form*/
+/* Auxiliar Method: PRINT_TABLE
+- Formats and prints text into a right-aligned column of 10 characters.
+*/
 void	PhoneBook::print_table(std::string text)
 {
 	int	len = text.length();
@@ -42,7 +49,10 @@ void	PhoneBook::print_table(std::string text)
 	std::cout << '|';
 }
 
-/* Auxiliar Method: Used to print the information stored in each contact of the class passed in the formated form*/
+/*
+Auxiliar Method: PRINT_CONTACT
+- Prints all details of a specific contact.
+*/
 void	PhoneBook::print_contact(int index)
 {
 	std::cout << "First Name : " << _phonebook[index].GetFirstName() << std::endl;
@@ -52,7 +62,10 @@ void	PhoneBook::print_contact(int index)
 	std::cout << "D. Secret  : " << _phonebook[index].GetDarkestSecret() << std::endl;
 }
 
-/* Auxiliar Method: Used to prompt the user for the information until he type anything acceptable*/
+/*
+Auxiliar Method: SCAN_INPUT
+- Prompts the user for input and ensures the input is not empty. Also handles EOF (Ctrl+D) to prevent infinite loops
+*/
 std::string	PhoneBook::scan_input(std::string prompt)
 {
 	std::string	input = "";
@@ -69,28 +82,27 @@ std::string	PhoneBook::scan_input(std::string prompt)
 	return (input);
 }
 
-/* Command Method: Used to add a contact to the PhoneBook*/
+/*
+Command Method: ADD
+- Adds a new contact to the phonebook.
+- Collects input for all contact fields. If the phonebook is full (8 contacts), it replaces the oldest contact in a circular manner.
+*/
 void	PhoneBook::add(void)
 {
 	std::string	input;
 
-	// FIRSTNAME
 	input = scan_input("First Name");
 	_phonebook[_index].SetFirstName(input);
 
-	// LASTNAME
 	input = scan_input("Last Name");
 	_phonebook[_index].SetLastName(input);
 
-	// NICKNAME
 	input = scan_input("Nickname");
 	_phonebook[_index].SetNickName(input);
 
-	// PHONENUMBER
 	input = scan_input("Phonenumber");
 	_phonebook[_index].SetPhoneNumber(input);
 
-	// DARKEST SECRET
 	input = scan_input("Darkest Secret");
 	_phonebook[_index].SetDarkestSecret(input);
 
@@ -102,7 +114,12 @@ void	PhoneBook::add(void)
 		_size = 8;
 }
 
-/* Command Method: Used to print the table if already exist and let the user choose any contact to access all the info even the hidden ones*/
+/*
+Command Method: SEARCH
+- Displays a formatted list of all saved contacts.
+- Prompts the user to select a valid index to view the contact's full details.
+- Handles out-of-range inputs and invalid characters gracefully.
+*/
 void	PhoneBook::search(void)
 {
 	std::string	firstname;
@@ -119,29 +136,28 @@ void	PhoneBook::search(void)
 
 	for (int i = 0; i < _size; i++)
 	{
-		// index
 		print_index(i);
 
-		// firstname
 		firstname = _phonebook[i].GetFirstName();
 		print_table(firstname);
 
-		// lastname
 		lastname = _phonebook[i].GetLastName();
 		print_table(lastname);
 
-		// nickname;
 		nickname = _phonebook[i].GetNickName();
 		print_table(nickname);
 
 		std::cout << std::endl;
 	}
-
 	std::string	index;
 	while (true)
 	{
 		std::cout << "\nindex: ";
-		std::getline(std::cin, index);
+		if (!std::getline(std::cin, index) || std::cin.eof())
+		{
+			std::cout << "\nEOF detected. Exiting..." << std::endl;
+			exit(0);
+		}
 		std::cout << "\n";
 		if (index.length() == 1 && (index[0] - '0' >= 0 && index[0] - '0' < _size))
 		{

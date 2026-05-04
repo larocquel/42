@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 02:55:05 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/04 21:59:19 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/04 22:40:18 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	main(void)
 		else if (cmd != "EXIT")
 			std::cout << "Error: Invalid command. Try again!" << std::endl;
 	}
-	std::cout << "Goodbye!" << std::endl; // Dúvida: Utilizei muitos std::endl no meu código, mas pelo que vi no manual é comum utilizar de forma errada acabando fazendo uma má gestão do buffer, não entendi, será que a minha foi a melhor abordagem?
+	std::cout << "Goodbye!" << std::endl;
 	return (0);
 }
