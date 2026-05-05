@@ -25,25 +25,25 @@ This repository is a **monorepo** that consolidates all projects developed by me
 > Click on the images to access the source code and documentation of each project.
 
 ### Milestone 0
-[![libft](PNG_URL_LIBFT)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_00/libft)
+[![libft](PNG_URL_LIBFT)](1-Common_Core/Milestone_00/libft)
 
 ### Milestone 1
-[![ft_printf](PNG_URL_PRINTF)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_01/ft_printf)
-[![get_next_line](PNG_URL_GNL)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_01/get_next_line)
+[![ft_printf](PNG_URL_PRINTF)](1-Common_Core/Milestone_01/ft_printf)
+[![get_next_line](PNG_URL_GNL)](1-Common_Core/Milestone_01/get_next_line)
 
 ### Milestone 2
-[![so_long](PNG_URL_SOLONG)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/so_long)
-[![push_swap](PNG_URL_PUSHSWAP)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/push_swap)
-[![minitalk](PNG_URL_MINITALK)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_02/minitalk)
+[![so_long](PNG_URL_SOLONG)](1-Common_Core/Milestone_02/so_long)
+[![push_swap](PNG_URL_PUSHSWAP)](1-Common_Core/Milestone_02/push_swap)
+[![minitalk](PNG_URL_MINITALK)](1-Common_Core/Milestone_02/minitalk)
 
 ### Milestone 3
-[![minishell](PNG_URL_MINISHELL)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_03/minishell)
-[![philosophers](PNG_URL_PHILOS)](https://github.com/larocquel/42/tree/c8e3cc0d60231a60b70e4bb8c864a28708fe60f2/1-Common_Core/Milestone_03/philosophers)
+[![minishell](PNG_URL_MINISHELL)](1-Common_Core/Milestone_03/minishell)
+[![philosophers](PNG_URL_PHILOS)](1-Common_Core/Milestone_03/philosophers)
 
 ### Milestone 4
 [![cub3d](PNG_URL_CUB3D)](FOLDER_LINK_CUB3D)
 [![netPractice](PNG_URL_NETPRACTICE)](FOLDER_LINK_NETPRACTICE)
-[![cpp](PNG_URL_CPP)](https://github.com/larocquel/42/tree/7d4f22988b7a14f284f99a08ef4c4af77c9f0b37/1-Common_Core/Milestone_04/cpp)
+[![cpp](PNG_URL_CPP)](1-Common_Core/Milestone_04/cpp)
 
 ### Milestone 5
 [![Inception](PNG_URL_INCEPTION)](FOLDER_LINK_INCEPTION)
