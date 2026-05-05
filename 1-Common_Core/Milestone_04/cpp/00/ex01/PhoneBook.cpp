@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:31:50 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/04 22:39:40 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/05 06:38:27 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ std::string	PhoneBook::scan_input(std::string prompt)
 	while(input.empty())
 	{
 		std::cout << std::left << std::setw(15) << prompt << ": ";
-		if (!std::getline(std::cin, input) || std::cin.eof())
+		std::getline(std::cin, input);
+		if (std::cin.eof())
 		{
 			std::cout << "\nEOF detected. Exiting..." << std::endl;
 			exit(0);
@@ -153,7 +154,8 @@ void	PhoneBook::search(void)
 	while (true)
 	{
 		std::cout << "\nindex: ";
-		if (!std::getline(std::cin, index) || std::cin.eof())
+		std::getline(std::cin, index);
+		if (std::cin.eof())
 		{
 			std::cout << "\nEOF detected. Exiting..." << std::endl;
 			exit(0);

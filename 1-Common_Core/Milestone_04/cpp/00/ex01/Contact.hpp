@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 21:49:25 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/04 22:41:53 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/05 06:42:46 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>	// std::cout << , std::cin >>
 #include <iomanip>	// std::setw()
 #include <cctype>	// toupper()
-#include <algorithm>// std::transform(begin, end, save_local, any_operation)
+#include <cstdlib>	// exit()
 
 class Contact
 {
