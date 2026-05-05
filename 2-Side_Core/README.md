@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/larocquel/42/raw/657381b15ef20ebb9d620b43f51055aa12a09907/3-Images/42_banner.png" alt="42 CC Banner" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/6dfabc86e6e91328d0a5fb379200513096917977/3-Images/42sidecore_banner.png" alt="42 CC Banner" width="100%" />
 </div>
 
 <br>
