@@ -1,7 +1,7 @@
 *This project has been created as part of the 42 curriculum by leoaguia.*
 
 <div align="center">
-  <img src="https://via.placeholder.com/1000x300/000000/FFFFFF/?text=CPP+Module+00" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/064347cb5b7af6f1d95a3622742380d3f4e39f26/1-Common_Core/Milestone_04/cpp/00/img/cpp00_banner.png" width="100%" />
 </div>
 
 ## ⚒ Creator
