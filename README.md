@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="BANNER_URL_HERE" alt="42 Projects Banner" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/1fb2257ef4faf6c209a39c88807fe3a1e59e4507/3-Images/42_banner.png" alt="42 Projects Banner" width="100%" />
 </div>
 
 <br>
@@ -10,19 +10,15 @@
 
 This repository is a **monorepo** that consolidates all projects developed by me during the 42 Core Curriculum. It serves as a portfolio of my progression and technical evolution throughout each school "Milestone".
 
----
-
 # ⚒ Creator
 
 <div align="left">
-  <a href="https://github.com/YOUR_USERNAME_HERE">
-    <img src="YOUR_PROFILE_PICTURE_URL_HERE" alt="Leonardo La Rocque" width="150" style="border-radius: 50%;" />
+  <a href="https://github.com/larocquel">
+    <img src="https://avatars.githubusercontent.com/larocquel?size=100" width="100">
   </a>
-  <br>
-  <em>"leoaguia"</em>
+  <br><br>
+  <b><a href="https://github.com/larocquel">Leonardo La Rocque</a></b>
 </div>
-
----
 
 ## 🕮 Projects
 
@@ -57,15 +53,11 @@ This repository is a **monorepo** that consolidates all projects developed by me
 ### Milestone 6
 [![ft_transcendence](PNG_URL_TRANSCENDENCE)](FOLDER_LINK_TRANSCENDENCE)
 
----
-
 ## ⚠ Disclaimer for 42 Students
 
 This repository is public to serve as a personal portfolio and as **reference and study** material. 
 
 **Do not copy this code**. Using someone else's work without understanding it defeats the purpose of the school, sabotages your own learning, and exposes you to the risk of failing due to *cheating* (-42) in evaluations. Read the code, understand the logic, discuss with your peers, but write your own solution.
-
----
 
 ## ⚖︎ License and Commercial Use
 
@@ -75,5 +67,3 @@ This project is protected under the **PolyForm Noncommercial License 1.0.0**.
 * **× Prohibited Use:** It is strictly forbidden to use this code for any commercial or profit-driven purposes, including paid products or services, without prior authorization.
 
 If you are a company looking to use this code in a commercial product, please contact me directly to negotiate a commercial license. See the [LICENSE.md](./LICENSE.md) file for full terms and conditions.
-
----
