@@ -22,36 +22,19 @@ This repository is a **monorepo** that consolidates all projects developed by me
 
 ## 🕮 Projects
 
-> Click on the images to access the source code and documentation of each project.
+| Project | Description | Tech Stack | Grade |
+| :--- | :--- | :---: | :---: |
+| **[minishell](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_03/minishell)** | Simplified version of the Bourne-Again Shell (Bash). Done in partnership. | `C` `Bash` `UNIX` `AST` | 100/100 |
+| **[philosophers](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_03/philosophers)** | Implementation of the Dining Philosophers problem using multithreading and proper resource management. | `C` `Threads` `Mutexes` | 100/100 |
+| **[minitalk](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_02/minitalk)** | A small data exchange program that uses UNIX signals to communicate strings between a client and a server. | `C` `UNIX Signals` | ★ 115/100 |
+| **[so_long](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_02/so_long)** | A small 2D game where a character must collect all items on a map and reach the exit. | `C` `MiniLibX` `Game Dev` | 100/100 |
+| **[push_swap](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_02/push_swap)** | Implementation of an optimized sorting algorithm using two stacks with the minimum possible number of operations. | `C` `Algorithms` `Stacks` | ★ 125/100 |
+| **born2beroot** | Setup and configuration of a virtual machine acting as a server, adhering to strict security policies. | `Debian` `VirtualBox` `Bash` | ★ 110/100 |
+| **[ft_printf](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_01/ft_printf)** | Recreation of the standard C library `printf` function, handling multiple format specifiers and conversions. | `C` `Variadic Funcs` | 100/100 |
+| **[get_next_line](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_01/get_next_line)** | A function that efficiently reads a line from a file descriptor using static buffers. | `C` `File I/O` | 100/100 |
+| **[libft](https://github.com/larocquel/42/tree/main/1-Common_Core/Milestone_00/libft)** | Custom C library re-implementing standard libc functions, including linked list manipulation. | `C` `Data Structures` | ★ 125/100 |
 
-### Milestone 0
-[![libft](PNG_URL_LIBFT)](1-Common_Core/Milestone_00/libft)
-
-### Milestone 1
-[![ft_printf](PNG_URL_PRINTF)](1-Common_Core/Milestone_01/ft_printf)
-[![get_next_line](PNG_URL_GNL)](1-Common_Core/Milestone_01/get_next_line)
-
-### Milestone 2
-[![so_long](PNG_URL_SOLONG)](1-Common_Core/Milestone_02/so_long)
-[![push_swap](PNG_URL_PUSHSWAP)](1-Common_Core/Milestone_02/push_swap)
-[![minitalk](PNG_URL_MINITALK)](1-Common_Core/Milestone_02/minitalk)
-
-### Milestone 3
-[![minishell](PNG_URL_MINISHELL)](1-Common_Core/Milestone_03/minishell)
-[![philosophers](PNG_URL_PHILOS)](1-Common_Core/Milestone_03/philosophers)
-
-### Milestone 4
-[![cub3d](PNG_URL_CUB3D)](FOLDER_LINK_CUB3D)
-[![netPractice](PNG_URL_NETPRACTICE)](FOLDER_LINK_NETPRACTICE)
-[![cpp](PNG_URL_CPP)](1-Common_Core/Milestone_04/cpp)
-
-### Milestone 5
-[![Inception](PNG_URL_INCEPTION)](FOLDER_LINK_INCEPTION)
-[![ft_irc](PNG_URL_FTIRC)](FOLDER_LINK_FTIRC)
-[![webserv](PNG_URL_WEBSERV)](FOLDER_LINK_WEBSERV)
-
-### Milestone 6
-[![ft_transcendence](PNG_URL_TRANSCENDENCE)](FOLDER_LINK_TRANSCENDENCE)
+---
 
 ## ⚠ Disclaimer for 42 Students
 
