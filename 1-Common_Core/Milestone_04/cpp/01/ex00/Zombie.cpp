@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:55:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/22 21:31:22 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/23 23:58:33 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 #include "Zombie.hpp"
 
-// Constructor: Inicialização ao compilar
+// Constructor: Initializes the zombie's name upon instantiation
 Zombie::Zombie(std::string name) : _name(name)
 {
-	std::cout << std::left << std::setw(10) << _name << ": Borned"  << std::endl;
+    std::cout << std::left << std::setw(10) << _name << ": BuaaaBuaaa"  << std::endl;
 }
 
-// Método público: Anunciar um zombie
-void	Zombie::announce(void)
+// Public Method: Makes the zombie announce itself
+void    Zombie::announce(void)
 {
-	std::cout << std::left << std::setw(10) << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << std::left << std::setw(10) << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-// Destructor:
-// Dúvida: O destructor é chamado sempre automaticamente ou somente quando faço delete?
+// Destructor: Automatically called upon object destruction (out of scope or deleted)
 Zombie::~Zombie()
 {
-	std::cout << std::left << std::setw(10) << _name << ": Destructed" << std::endl;
+    std::cout << std::left << std::setw(10) << _name << ": Headshot" << std::endl;
 }

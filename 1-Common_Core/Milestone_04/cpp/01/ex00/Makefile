@@ -6,9 +6,11 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/22 14:56:30 by leoaguia          #+#    #+#              #
-#    Updated: 2026/05/22 23:20:48 by leoaguia         ###   ########.fr        #
+#    Updated: 2026/05/23 23:57:57 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# Makefile
 
 NAME        = zombie
 
@@ -20,39 +22,39 @@ RM          = rm -rf
 # Directories
 OBJ_DIR     = obj/
 
-# Files
+# Source Files
 SRCS        = main.cpp \
               Zombie.cpp \
               newZombie.cpp \
               randomChump.cpp
 
-# Mapping
+# Object Mapping
 OBJS        = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
-# Dependences
+# Dependencies
 DEPS        = Zombie.hpp
 
-# Rules
+# Default Rule
 all: $(NAME)
 
-# Link
+# Executable Linking
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-# Compilation and obj/ creation
+# Object Compilation & Directory Creation
 $(OBJ_DIR)%.o: %.cpp $(DEPS)
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean
+# Clean Object Files
 clean:
 	$(RM) $(OBJ_DIR)
 
-# Full Clean
+# Full Clean (Objects & Executable)
 fclean: clean
 	$(RM) $(NAME)
 
-# Rebuild
+# Rebuild Project
 re: fclean all
 
 .PHONY: all clean fclean re

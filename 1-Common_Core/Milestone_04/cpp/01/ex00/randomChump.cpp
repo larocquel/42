@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:55:03 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/22 21:37:41 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/23 23:59:33 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 #include "Zombie.hpp"
 
-// This function creates a zombie, names it, and makes it announce itself.
-void 	randomChump(std::string name)
+// Creates a Zombie statically (Stack), assigns a name, and makes it announce itself.
+// The object is automatically destroyed when the function goes out of scope.
+void    randomChump(std::string name)
 {
-	Zombie	zombie(name);
+    Zombie  zombie(name);
 
-	zombie.announce();
+    zombie.announce();
 }

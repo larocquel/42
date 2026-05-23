@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:54:55 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/22 21:36:39 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/23 23:59:20 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 #include "Zombie.hpp"
 
-// This function creates a zombie, names it, and returns it so you can use it outside of the function scope.
+// Creates a Zombie dynamically (Heap), assigns a name, and returns its pointer.
+// The caller is responsible for freeing the allocated memory.
 Zombie* newZombie(std::string name)
 {
-	Zombie	*zombie = new Zombie(name);
+    Zombie  *zombie = new Zombie(name);
 
-	return (zombie);
+    return (zombie);
 }
