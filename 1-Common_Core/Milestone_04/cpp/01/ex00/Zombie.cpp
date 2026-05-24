@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:55:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/23 23:58:33 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/24 01:23:07 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // Constructor: Initializes the zombie's name upon instantiation
 Zombie::Zombie(std::string name) : _name(name)
 {
-    std::cout << std::left << std::setw(10) << _name << ": BuaaaBuaaa"  << std::endl;
+    std::cout << std::left << std::setw(10) << _name << ": Was Born!"  << std::endl;
 }
 
 // Public Method: Makes the zombie announce itself
@@ -29,5 +29,5 @@ void    Zombie::announce(void)
 // Destructor: Automatically called upon object destruction (out of scope or deleted)
 Zombie::~Zombie()
 {
-    std::cout << std::left << std::setw(10) << _name << ": Headshot" << std::endl;
+    std::cout << std::left << std::setw(10) << _name << ": Died!" << std::endl;
 }
