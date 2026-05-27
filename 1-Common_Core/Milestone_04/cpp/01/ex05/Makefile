@@ -6,13 +6,13 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/27 21:31:18 by leoaguia          #+#    #+#              #
-#    Updated: 2026/05/27 21:36:03 by leoaguia         ###   ########.fr        #
+#    Updated: 2026/05/27 22:29:49 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = harlAKAkaren
+# Makefile
 
-TEXT		= Usage example: ./harlAKAkaren DEBUG INFO WARNING ERROR
+NAME        = harlAKAkaren
 
 CC          = c++
 CFLAGS      = -std=c++98 -Wall -Wextra -Werror
@@ -35,8 +35,6 @@ $(NAME): $(OBJS)
 $(OBJ_DIR)%.o: %.cpp $(INCS)
 	mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
-
-cat $(TEXT)
 
 clean:
 	$(RM) $(OBJ_DIR)

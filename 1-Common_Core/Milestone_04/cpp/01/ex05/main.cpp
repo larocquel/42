@@ -6,23 +6,34 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 21:27:52 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/27 21:40:55 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/27 22:42:01 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
-
 #include "Harl.hpp"
 
-int	main(int ac, std::string av[])
+// Function: Main entry point of the program, validates arguments and triggers the complaints
+int main(int ac, char **av)
 {
-	if (ac < 2)
-	{
-		std::cerr << "Error: Invalid number of parameters" << std::endl;
-	}
+    // 1. Parameter Check
+    if (ac < 2)
+    {
+        std::cerr << "Usage: ./harlAKAkaren DEBUG INFO WARNING ERROR ..." << std::endl;
+        return (1);
+    }
 
-	for (int i = 0, i < ac, i++)
-	{
-		Harl::complain(av[i]);
-	}
+    // 2. Instantiate the Harl object
+    Harl    karen;
+
+    // 3. Loop through the provided arguments and call the complain method for each
+    for (int i = 1; i < ac; i++)
+    {
+        std::cout << std::endl;
+        karen.complain(av[i]);
+    }
+
+    // 4. Formatting with nline
+    std::cout << std::endl;
+    
+    return (0);
 }

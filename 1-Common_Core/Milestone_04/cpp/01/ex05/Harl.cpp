@@ -6,54 +6,62 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 21:24:28 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/27 21:31:09 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/27 22:41:00 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Harl.cpp
-
 #include "Harl.hpp"
 
-void	Harl::debug(void)
-{
-	std::cout << "I love to remove the sauce of my francesinha, I really do." << std::endl;
-}
-
-void	Harl::info(void)
-{
-	std::cout << "I cannot believe the chef dipped my head in the pan of sauce. It was kinda hot tbh!" << std::endl;
-}
-
-void	Harl::warning(void)
-{
-	std::cout << "I believe I deserve a flat Sagres for not eating francesinha with sauce. Do I need cutllery to eat a sandwish, come on!" << std::endl;
-}
-
-void	Harl::error(void)
-{
-	std::cout << "This is unaceptable, just because I used a Benfica shirt on São João. I need to speak with the major NOW!" << std::endl;
-}
-
+// Constructor: Default initialization
 Harl::Harl() {}
 
+// Destructor: Default cleanup
 Harl::~Harl() {}
 
-void	Harl::complain(std::string level)
+// Private Method: Prints a debug level message
+void    Harl::debug(void)
 {
-	// 1. Array de string com os 4 léveis
-	std::string	functions[] = {DEBUG, INFO, WARNING, ERROR};
+    std::cout << "DEBUG: " << "I love to remove the sauce of my francesinha, I really do." << std::endl;
+}
 
-	// 2. Array de ponteiros para as funções
-	void (Harl::*functions[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+// Private Method: Prints an info level message
+void    Harl::info(void)
+{
+    std::cout << "INFO: " << "I’d appreciate a flat Sagres for not eating francesinha with sauce!" << std::endl;
+}
 
-	// 3. Loop de execução
-	for (int i = 0; i < 4; i++)
-	{
-		if (level == functions[i]) // Posso usar esse if?
-		{
-			*functions[i];
-			return ;
-		}
-	}
-	return ;
+// Private Method: Prints a warning level message
+void    Harl::warning(void)
+{
+    std::cout << "WARNING: " << "Do I need cutlery to eat a sandwich? Come on!" << std::endl;
+}
+
+// Private Method: Prints an error level message
+void    Harl::error(void)
+{
+    std::cout << "ERROR: " << "The chef dipped my head in the pan of sauce, I can't stand piripiri!" << std::endl;
+}
+
+// Public Method: Executes the matching function to level using Pointers to Member Functions
+void    Harl::complain(std::string level)
+{
+    // 1. Array of strings containing the valid level names
+    std::string functionName[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+    // 2. Array of pointers to member functions corresponding to each level
+    void (Harl::*functionPointer[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+
+    // 3. Execution loop to find and trigger the requested complaint level
+    for (int i = 0; i < 4; i++)
+    {
+        if (level == functionName[i])
+        {
+            // Execute the matched member function via the pointer
+            (this->*functionPointer[i])();
+            return ;
+        }
+    }
+
+    // 4. Generic error message if the provided level is not found
+    std::cerr << "FDS: " << level << "? Unacceptable, GET OUT!" << std::endl;
 }
