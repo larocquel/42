@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sedLoser.hpp                                       :+:      :+:    :+:   */
+/*   SedLoser.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 03:36:23 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/27 05:29:39 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:09:38 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SedLoser_HPP
-# define SedLoser_HPP
+#ifndef SEDLOSER_HPP
+# define SEDLOSER_HPP
 
 # include <iostream>
 # include <fstream>

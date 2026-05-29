@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 00:18:41 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/25 17:45:47 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:33:15 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,25 @@ int main()
 	}
 	return 0;
 }
+
+// My main
+
+// int	main()
+// {
+// 	{
+// 		Weapon	arsenal = Weapon("Knife");
+// 		HumanA	filipe("Filipe", arsenal);
+// 		filipe.attack();
+// 		arsenal.setType("M4A4");
+// 		filipe.attack();
+// 	}
+// 	{
+// 		Weapon	arsenal = Weapon("Knife");
+// 		HumanB	fernando("Fernando");
+// 		fernando.attack();
+// 		fernando.setWeapon(arsenal);
+// 		fernando.attack();
+// 		arsenal.setType("AK47");
+// 		fernando.attack();
+// 	}
+// }

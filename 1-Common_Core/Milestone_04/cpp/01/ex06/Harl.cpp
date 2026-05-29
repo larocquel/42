@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 00:34:58 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/28 02:13:26 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:11:51 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,13 @@ void    Harl::filter(std::string level)
     switch (levelIndex)
     {
         case 0:
-        {
             this->debug();
-        }
         // fall through
         case 1:
-        {
             this->info();
-        }
         // fall through
         case 2:
-        {
             this->warning();
-        }
         // fall through
         case 3:
         {
@@ -78,9 +72,6 @@ void    Harl::filter(std::string level)
             break;
         }
         default:
-        {
             std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
-            break;
-        }
     }
 }

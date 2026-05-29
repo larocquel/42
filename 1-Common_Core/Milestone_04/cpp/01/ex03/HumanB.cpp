@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:20:54 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/25 18:00:23 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:13:57 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void HumanB::attack()
 {
 	if (!_weapon)
 	{
-		std::cout << _name << "is unarmed, he's now running AF!" << std::endl;
+		std::cout << _name << " is unarmed, he's now running AF!" << std::endl;
 		return;
 	}
 	std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;

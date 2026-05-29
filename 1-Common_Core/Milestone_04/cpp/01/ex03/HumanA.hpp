@@ -6,13 +6,13 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:20:21 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/05/25 17:56:23 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:03:21 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // HumanA.hpp
 
-#ifndef HUAMANA_HPP
+#ifndef HUMANA_HPP
 # define HUMANA_HPP
 
 # include "Weapon.hpp"
