@@ -6,20 +6,20 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 18:12:26 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/01 13:36:04 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/01 13:43:25 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-# include <iostring>
+# include <iostream>
 
 class	Fixed
 {
 	private:
 		int					_value;	// Valor do número de ponto fixo
-		static const int	_fbits = 8;	// Número de bits fracionários, sempre = 8 (nesse exercício)
+		static const int	_fBits = 8;	// Número de bits fracionários, sempre = 8 (nesse exercício)
 
 	public:
 		// Forma Canônina Ortodoxa
@@ -29,8 +29,8 @@ class	Fixed
 		~Fixed();	// Destrutor
 
 		// Getter e Setter
-		int getRawBits( void ) const; // returns the raw value of the fixed-point value.
-		void setRawBits( int const raw ); // that sets the raw value of the fixed-point number.
+		int getRawBits(void) const; // returns the raw value of the fixed-point value.
+		void setRawBits(int const raw); // that sets the raw value of the fixed-point number.
 };
 
 #endif
