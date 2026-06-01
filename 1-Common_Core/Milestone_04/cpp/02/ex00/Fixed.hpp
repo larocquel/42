@@ -6,31 +6,33 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 18:12:26 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/01 13:43:25 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/01 17:52:18 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Fixed.hpp
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
 # include <iostream>
 
-class	Fixed
+class Fixed
 {
-	private:
-		int					_value;	// Valor do número de ponto fixo
-		static const int	_fBits = 8;	// Número de bits fracionários, sempre = 8 (nesse exercício)
+    private:
+        int                 _value;       // Fixed-point number value
+        static const int    _fBits = 8;   // Number of fractional bits
 
-	public:
-		// Forma Canônina Ortodoxa
-		Fixed(); // Construtor
-		Fixed(const Fixed& other);	// Construtor de cópia
-		Fixed&	operator=(const Fixed& other);	// Operador de cópia
-		~Fixed();	// Destrutor
+    public:
+        // Orthodox Canonical Form
+        Fixed();                                  // Default constructor
+        Fixed(const Fixed& other);                // Copy constructor
+        Fixed& operator=(const Fixed& other);     // Copy assignment operator
+        ~Fixed();                                 // Destructor
 
-		// Getter e Setter
-		int getRawBits(void) const; // returns the raw value of the fixed-point value.
-		void setRawBits(int const raw); // that sets the raw value of the fixed-point number.
+        // Getters and Setters
+        int     getRawBits(void) const;           // Returns the raw value
+        void    setRawBits(int const raw);        // Sets the raw value
 };
 
 #endif
