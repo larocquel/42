@@ -6,14 +6,16 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 09:03:46 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/02 09:42:31 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:12:05 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Fixed.hpp
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-#include <cmath>
+# include <cmath>
 
 class	Fixed
 {
@@ -37,8 +39,32 @@ class	Fixed
 		void	setRawBits(int const raw);
 
 		// Converters
-		int		toInt(void);					// Converts to Int
-		float	toFloat(void);					// Converts to Float
+		int		toInt(void) const;				// Converts to Int
+		float	toFloat(void) const;			// Converts to Float
+
+		// Comparison Operators
+		bool	operator>(const Fixed& other) const;
+		bool	operator<(const Fixed& other) const;
+		bool	operator>=(const Fixed& other) const;
+		bool	operator<=(const Fixed& other) const;
+		bool	operator==(const Fixed& other) const;
+		bool	operator!=(const Fixed& other) const;
+
+		// Arithmetic Operators
+		Fixed	operator+(const Fixed& other) const;
+		Fixed	operator-(const Fixed& other) const;
+		Fixed	operator*(const Fixed& other) const;
+		Fixed	operator/(const Fixed& other) const;
+
+		// Increment Operators
+		Fixed&	operator++(void);
+		Fixed	operator++(int);
+
+		// Static Functions: Min & Max
+        static Fixed& min(Fixed& a, Fixed& b);
+        static const Fixed& min(const Fixed& a, const Fixed& b);
+        static Fixed& max(Fixed& a, Fixed& b);
+        static const Fixed& max(const Fixed& a, const Fixed& b);
 };
 
 // Output stream insertion operator
