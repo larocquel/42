@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 09:03:37 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/02 17:10:41 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:15:35 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 #include "Fixed.hpp"
 
-// Constructor:
+// Default Constructor: Initializes the value to 0
 Fixed::Fixed() : _value(0) {}
 
-// Copy Constructor:
+// Copy Constructor: Creates a new object as a copy of another
 Fixed::Fixed(const Fixed& other)
 {
 	*this = other;
 }
 
-// Copy Assignment Operator:
+// Copy Assignment Operator: Assigns values from one object to another
 Fixed&	Fixed::operator=(const Fixed& other)
 {
 	if (this != &other)
@@ -33,121 +33,101 @@ Fixed&	Fixed::operator=(const Fixed& other)
 	return (*this);
 }
 
-// Destructor:
+// Destructor: Cleans up the object
 Fixed::~Fixed() {}
 
-// Getter:
+// Getter: Returns the raw internal integer value
 int	Fixed::getRawBits(void) const
 {
 	return (this->_value);
 }
 
-// Setter:
+// Setter: Sets the raw internal integer value
 void	Fixed::setRawBits(int const raw)
 {
 	this->_value = raw;
 }
 
-// Int Constructor:
-Fixed::Fixed(int n)
+// Int Constructor: Converts an integer to fixed-point format
+Fixed::Fixed(const int n)
 {
 	this->_value = n << _fBits;
 }
 
-// Float Constructor
-Fixed::Fixed(float n)
+// Float Constructor: Converts a float to fixed-point format
+Fixed::Fixed(const float n)
 {
 	float tmp = n * (1 << _fBits);
 	this->_value = roundf(tmp);
 }
 
-// Converter: Converts to Integer
+// Int Converter: Converts the fixed-point value back to an integer
 int		Fixed::toInt(void) const
 {
 	return (this->_value >> _fBits);
 }
 
-// Converter: Converts to Float
+// Float Converter: Converts the fixed-point value back to a float
 float	Fixed::toFloat(void) const
 {
 	float	tmp = (float)this->_value / (1 << _fBits);
 	return (tmp);
 }
 
-// 1. Comparison Operators
+// COMPARISON OPERATORS
 
 // Greater Operator:
 bool	Fixed::operator>(const Fixed& other) const
-{
-	return (this->_value > other._value);
-}
+{ return (this->_value > other._value); }
 
 // Less Operator:
 bool	Fixed::operator<(const Fixed& other) const
-{
-	return (this->_value < other._value);
-}
+{ return (this->_value < other._value); }
 
 // Greater Or Equal Operator:
 bool	Fixed::operator>=(const Fixed& other) const
-{
-	return (this->_value >= other._value);
-}
+{ return (this->_value >= other._value); }
 
 // Less Or Equal Operator:
 bool	Fixed::operator<=(const Fixed& other) const
-{
-	return (this->_value <= other._value);
-}
+{ return (this->_value <= other._value); }
 
 // Equal Operator:
 bool	Fixed::operator==(const Fixed& other) const
-{
-	return (this->_value == other._value);
-}
+{ return (this->_value == other._value); }
 
 // Different Operator:
 bool	Fixed::operator!=(const Fixed& other) const
-{
-	return (this->_value != other._value);
-}
+{ return (this->_value != other._value); }
 
-// 2. Arithmetic Operators
+// ARITHMETIC OPERATORS
 
 // Add Operator:
 Fixed	Fixed::operator+(const Fixed& other) const
-{
-	return (Fixed(this->toFloat() + other.toFloat()));
-}
+{ return (Fixed(this->toFloat() + other.toFloat())); }
 
 // Subtraction Operator:
 Fixed	Fixed::operator-(const Fixed& other) const
-{
-	return (Fixed(this->toFloat() - other.toFloat()));
-}
+{ return (Fixed(this->toFloat() - other.toFloat())); }
 
 // Multiplication Operator:
 Fixed	Fixed::operator*(const Fixed& other) const
-{
-	return (Fixed(this->toFloat() * other.toFloat()));
-}
+{ return (Fixed(this->toFloat() * other.toFloat())); }
 
 // Division Operator:
 Fixed	Fixed::operator/(const Fixed& other) const
-{
-	return (Fixed(this->toFloat() / other.toFloat()));
-}
+{ return (Fixed(this->toFloat() / other.toFloat())); }
 
-// 3. Increment Operators
+// INCREMENT OPERATORS
 
-// Pré-incremento (Retorna o próprio objeto já alterado por referência)
+// Pre-increment Operator (++a)
 Fixed& Fixed::operator++(void)
 {
 	this->_value++;
 	return (*this);
 }
 
-// Pós-incremento (Retorna uma cópia do objeto ANTES de ser alterado. O 'int' fantasma serve só pro C++ diferenciar)
+// Post-increment Operator (a++)
 Fixed Fixed::operator++(int)
 {
 	Fixed	copy(*this);
@@ -155,14 +135,14 @@ Fixed Fixed::operator++(int)
 	return (copy);
 }
 
-// Pré-decremento (Retorna o próprio objeto já alterado por referência)
+// Pre-decrement Operator (--a)
 Fixed& Fixed::operator--(void)
 {
 	this->_value--;
 	return (*this);
 }
 
-// Pós-decremento (Retorna uma cópia do objeto ANTES de ser alterado. O 'int' fantasma serve só pro C++ diferenciar)
+// Post-decrement Operator (a--)
 Fixed Fixed::operator--(int)
 {
 	Fixed	copy(*this);
@@ -170,31 +150,23 @@ Fixed Fixed::operator--(int)
 	return (copy);
 }
 
-// Min e Max (Funções Estáticas)
+// Min & Max (Static Functions)
 
 // Min
 Fixed&			Fixed::min(Fixed& a, Fixed& b)
-{
-	return ((a < b) ? a : b);
-}
+{ return ((a < b) ? a : b); }
 
-// Min constant
+// Min Constant
 const Fixed&	Fixed::min(const Fixed& a, const Fixed& b)
-{
-	return ((a < b) ? a : b);
-}
+{ return ((a < b) ? a : b); }
 
 // Max
 Fixed&			Fixed::max(Fixed& a, Fixed& b)
-{
-	return ((a > b) ? a : b);
-}
+{ return ((a > b) ? a : b); }
 
-// Max constant
+// Max Constant
 const Fixed&	Fixed::max(const Fixed& a, const Fixed& b)
-{
-	return ((a > b) ? a : b);
-}
+{ return ((a > b) ? a : b); }
 
 // Insertion Operator: Overloads the << operator to print the float representation
 std::ostream&	operator<<(std::ostream& os, const Fixed& obj)

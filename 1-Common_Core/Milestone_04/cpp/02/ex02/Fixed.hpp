@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 09:03:46 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/02 17:12:05 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:02:45 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
+# include <iostream>
 # include <cmath>
 
 class	Fixed
@@ -25,22 +26,22 @@ class	Fixed
 
 	public:
 		// Ortodox Canonical Form
-		Fixed();								// Constructor
-		Fixed(const Fixed& other);				// Copy Constructor
-		Fixed&	operator=(const Fixed& other);	// Copy Operator
-		~Fixed();								// Destructor
+		Fixed();
+		Fixed(const Fixed& other);
+		Fixed&	operator=(const Fixed& other);
+		~Fixed();
 
 		// Other Constructors
-		Fixed(const int n);						// Int Constructor
-		Fixed(const float n);					// Float Constructor
+		Fixed(const int n);
+		Fixed(const float n);
 
 		// Getter e Setter
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
-		// Converters
-		int		toInt(void) const;				// Converts to Int
-		float	toFloat(void) const;			// Converts to Float
+		// Type Converters
+		int		toInt(void) const;
+		float	toFloat(void) const;
 
 		// Comparison Operators
 		bool	operator>(const Fixed& other) const;
@@ -56,14 +57,16 @@ class	Fixed
 		Fixed	operator*(const Fixed& other) const;
 		Fixed	operator/(const Fixed& other) const;
 
-		// Increment Operators
-		Fixed&	operator++(void);
-		Fixed	operator++(int);
+		// Increment & Decrement Operators
+		Fixed&	operator++(void);	// Pre
+		Fixed	operator++(int);	// Post
+		Fixed&	operator--(void);	// Pre
+		Fixed	operator--(int);	// Post
 
 		// Static Functions: Min & Max
-        static Fixed& min(Fixed& a, Fixed& b);
+        static Fixed& 		min(Fixed& a, Fixed& b);
         static const Fixed& min(const Fixed& a, const Fixed& b);
-        static Fixed& max(Fixed& a, Fixed& b);
+        static Fixed& 		max(Fixed& a, Fixed& b);
         static const Fixed& max(const Fixed& a, const Fixed& b);
 };
 
