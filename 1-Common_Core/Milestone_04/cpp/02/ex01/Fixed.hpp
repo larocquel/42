@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:38:14 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/01 21:39:49 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/02 08:53:05 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,26 @@
 # define FIXED_HPP
 
 # include <iostream>
-# include <cmath> // roundf()
+# include <cmath>	// roundf()
 
 class Fixed
 {
 	private:
 		int					_value;
-		static const int	_fBits = 8;
+		static const int    _fBits = 8;
 
 	public:
-		// Ortodox Canonical Form
-		Fixed();								// Construtor
-		Fixed(const Fixed& other);				// Copy Construtor de cópia
-		Fixed& operator=(const Fixed& other);	// Copy Assignment Operator
+		// Orthodox Canonical Form
+		Fixed();								// Default constructor
+		Fixed(const Fixed& other);				// Copy constructor
+		Fixed& operator=(const Fixed& other);	// Copy assignment operator
 		~Fixed();								// Destructor
 
 		// New Constructors
-		Fixed(const int n);						// Int Constructor
-		Fixed(const float n);					// Float Constructor
+		Fixed(const int n);						// Int constructor
+		Fixed(const float n);					// Float constructor
 
-		// Getter e Setter
+		// Getters and Setters
 		int     getRawBits(void) const;
 		void    setRawBits(int const raw);
 
@@ -43,5 +43,8 @@ class Fixed
 		int     toInt(void) const;				// Converts to int
 		float   toFloat(void) const;			// Converts to float
 };
+
+// Output stream insertion operator
+std::ostream&	operator<<(std::ostream& os, const Fixed& obj);
 
 #endif
