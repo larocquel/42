@@ -55,8 +55,8 @@ O **Módulo 01** marca a transição do C clássico para o paradigma orientado a
 </div>
 
 <p align="center">
-  <a href="https://github.com/larocquel/42/blob/394fa0989ebb0e1dccc37d129e0863130e7707de/1-Common_Core/Milestone_04/cpp/01/Cpp01_CompleteManual.pdf"><img src="https://github.com/larocquel/42/raw/3c33eac50f9ec491ef9e46b73ba8ff5f50f33f85/1-Common_Core/Milestone_04/cpp/01/img/guia_definitivo.png" width="40%"/></a>
-  <a href="https://github.com/larocquel/42/blob/394fa0989ebb0e1dccc37d129e0863130e7707de/1-Common_Core/Milestone_04/cpp/01/Cpp01_CheatSheet.pdf"><img src="https://github.com/larocquel/42/raw/3c33eac50f9ec491ef9e46b73ba8ff5f50f33f85/1-Common_Core/Milestone_04/cpp/01/img/cheet_sheet.png" width="40%"/></a>
+  <a href="https://github.com/larocquel/42/blob/394fa0989ebb0e1dccc37d129e0863130e7707de/1-Common_Core/Milestone_04/cpp/01/img/Cpp01_CompleteManual.pdf"><img src="https://github.com/larocquel/42/raw/3c33eac50f9ec491ef9e46b73ba8ff5f50f33f85/1-Common_Core/Milestone_04/cpp/01/img/guia_definitivo.png" width="40%"/></a>
+  <a href="https://github.com/larocquel/42/blob/394fa0989ebb0e1dccc37d129e0863130e7707de/1-Common_Core/Milestone_04/cpp/01/img/Cpp01_CheatSheet.pdf"><img src="https://github.com/larocquel/42/raw/3c33eac50f9ec491ef9e46b73ba8ff5f50f33f85/1-Common_Core/Milestone_04/cpp/01/img/cheet_sheet.png" width="40%"/></a>
 </p>
 
 </td>
