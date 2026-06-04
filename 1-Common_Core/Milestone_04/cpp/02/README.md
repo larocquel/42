@@ -1,7 +1,7 @@
 *This project has been created as part of the 42 curriculum by leoaguia.*
 
 <div align="center">
-  <img src="https://github.com/larocquel/42/raw/3937d5f1305b46460cdfe6bcaa0741f985c4bdcb/1-Common_Core/Milestone_04/cpp/02/img/cpp02_banner.png" width="100%" />
+  <img src="https://github.com/larocquel/42/raw/e42e8429d0396cc56806b9afeb04d391c90faeec/1-Common_Core/Milestone_04/cpp/02/img/cpp02_banner.png" width="100%" />
 </div>
 
 ---
