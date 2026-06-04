@@ -6,35 +6,40 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:43:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/04 14:12:11 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/04 23:25:10 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// ClapTrap.hpp
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
-# include <iosteram>
+# include <iostream>
 # include <string>
 
-class ClapTrap
+class	ClapTrap
 {
 	private:
-			std::string	_name;
-			int			_hitPoints;
-			int			_energyPoints;
-			int			_attackDamage;
+		std::string		_name;
+		int				_hitPoints;
+		int				_energyPoints;
+		int				_attackDamage;
+
 	public:
+		// OCF: Ortodox Canonical Form
+		ClapTrap();										// Constructor
+		ClapTrap(const ClapTrap& other);				// Copy Constructor
+		ClapTrap&	operator=(const ClapTrap& other);	// Copy Assignment Operator
+		~ClapTrap();									// Destructor
 
-	// Ortodox Canonical Form
-	ClapTrap(std::string Name);						// Constructor
-	ClapTrap(const ClapTrap& other);				// Copy Contructor
-	ClapTrap&	operator=(const ClapTrap& other);	// Copy Assignment Operator
-	~ClapTrap();
+		// Parametrized Constructor
+		ClapTrap(std::string name);
 
-	// Mandatory Methods
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+		// Member Functions (Actions)
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
 
 #endif
