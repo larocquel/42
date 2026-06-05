@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/05 09:41:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 13:04:55 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/05 12:50:16 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/05 13:05:15 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ScavTrap.hpp
+// FragTrap.hpp
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap
+class	FragTrap : public ClapTrap
 {
 	public:
-		// OCF
-		ScavTrap();										// Default Constructor
-		ScavTrap(const ScavTrap& other);				// Copy Constructor
-		ScavTrap&	operator=(const ScavTrap& other);	// Copy Assignment Operator
-		~ScavTrap();									// Destructor
+		// Ortodox Canonical Form
+		FragTrap();										// Default Constructor
+		FragTrap(const FragTrap& other);				// Copy Constructor
+		FragTrap&	operator=(const FragTrap& other);	// Copy Assignment Operator
+		~FragTrap();									// Destructor
 
 		// Parametrized Constructor
-		ScavTrap(std::string name);
+		FragTrap(std::string name);
 
 		// Member Functions
 		void	attack(const std::string& target);		// Override of ClapTrap's attack
-		void	guardGate();							// Exclusive method
+		void	highFivesGuys(void);					// Exclusive method
 };
 
 #endif

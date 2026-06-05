@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 09:41:35 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 12:18:11 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 13:03:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) // Como um ScavTrap 
 // Copy Assignment Operator: Call the base class assignment operator to handle the attributes
 ScavTrap&	ScavTrap::operator=(const ScavTrap& other)
 {
+	std::cout << "ScavTrap Copy Assignment Operator called for " << other._name << std::endl;
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
