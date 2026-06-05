@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:43:31 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/04 23:38:33 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 09:38:03 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // Default Constructor: Initializes a ClapTrap with default values.
 ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-    std::cout << "ClapTrap Default Constructor called for " << this->_name << std::endl;
+	std::cout << "ClapTrap Default Constructor called for " << this->_name << std::endl;
 }
 
 
@@ -31,14 +31,14 @@ ClapTrap::ClapTrap(const ClapTrap& other) : _name(other._name), _hitPoints(other
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
 	std::cout << "ClapTrap Copy Assignment Operator called for " << other._name << std::endl;
-    if (this != &other)
-    {
+	if (this != &other)
+	{
 		this->_name = other._name;
-        this->_hitPoints = other._hitPoints;
-        this->_energyPoints = other._energyPoints;
-        this->_attackDamage = other._attackDamage;
-    }
-    return (*this);
+		this->_hitPoints = other._hitPoints;
+		this->_energyPoints = other._energyPoints;
+		this->_attackDamage = other._attackDamage;
+	}
+	return (*this);
 }
 
 // Destructor: Called when the object is destroyed (goes out of scope or is deleted).
