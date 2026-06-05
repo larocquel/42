@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 09:40:58 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 10:53:30 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 12:24:29 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class	ClapTrap
 {
-	protected:	// Tive que trocar de private para protected a fim de que as classes filhas tenham acessos a esses atributos
+	protected:	// The 'protected' access specifier is accessible by this class and its derived classes, but hidden from the outside.
 		std::string		_name;
 		int				_hitPoints;
 		int				_energyPoints;

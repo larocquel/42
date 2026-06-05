@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 09:41:35 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 11:52:44 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 12:18:11 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "ScavTrap.hpp"
 
-// Constructor
+// Default Constructor
 ScavTrap::ScavTrap()
 {
 	_hitPoints = 100;
@@ -23,13 +23,13 @@ ScavTrap::ScavTrap()
 	std::cout << "ScavTrap Default Constructor called for " << this->_name << std::endl;
 }
 
-// Copy Constructor
+// Copy Constructor: Passes the object to the Base Class copy constructor
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) // Como um ScavTrap é derivada da Base ClapTrap, todos os valores já ficam inicializados
 {
 	std::cout << "ScavTrap Copy Constructor called, copying from " << other._name << std::endl;
 }
 
-// Copy Assignment Operator
+// Copy Assignment Operator: Call the base class assignment operator to handle the attributes
 ScavTrap&	ScavTrap::operator=(const ScavTrap& other)
 {
 	if (this != &other)
@@ -45,7 +45,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap Destructor called for " << this->_name << std::endl;
 }
 
-// Parametrized Constructor
+// Parameterized Constructor: Calls the Base Class parameterized constructor
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	_hitPoints = 100;
@@ -54,7 +54,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap Parameterized Constructor called for " << this->_name << std::endl;
 }
 
-// Override
+// attack: Overrides the ClapTrap attack with new messages and values
 void	ScavTrap::attack(const std::string& target)
 {
 	if (_hitPoints <= 0 || _energyPoints <= 0)
@@ -66,7 +66,7 @@ void	ScavTrap::attack(const std::string& target)
 	std::cout << "ScavTrap " << _name <<  " VIOLENTLY ATTACKS " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 }
 
-// Exclusive method
+// guardGate: Exclusive ScavTrap method
 void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << _name << " is now in GATE KEEPER MODE." << std::endl;

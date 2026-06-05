@@ -6,21 +6,21 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/05 09:40:45 by leoaguia          #+#    #+#              #
-#    Updated: 2026/06/05 09:40:47 by leoaguia         ###   ########.fr        #
+#    Updated: 2026/06/05 12:25:11 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Makefile
 
 # Binary Name
-NAME		=	claptrap
+NAME		=	scavtrap
 
 # Compilation
 CXX			=	c++
 CXXFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
 # Files
-SRCS		=	main.cpp ClapTrap.cpp
+SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
 # Objects
 OBJSDIR		=	obj/

@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 09:41:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 10:56:58 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 12:16:12 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,18 @@ class	ScavTrap : public ClapTrap // DÚVIDA: Até os atributos prvados do ClapTr
 	private:
 
 	public:
-		// OCF: Qual a necessidade de redeclarar a OCF?
-		ScavTrap();
-		ScavTrap(const ScavTrap& other);
-		ScavTrap&	operator=(const ScavTrap& other);
-		~ScavTrap();
+		// OCF
+		ScavTrap();										// Default Constructor
+		ScavTrap(const ScavTrap& other);				// Copy Constructor
+		ScavTrap&	operator=(const ScavTrap& other);	// Copy Assignment Operator
+		~ScavTrap();									// Destructor
 
 		// Parametrized Constructor
 		ScavTrap(std::string name);
 
-		// Override
-		void	attack(const std::string& target);
-
-		// Exclusive method
-		void	guardGate();
+		// Member Functions
+		void	attack(const std::string& target);		// Override of ClapTrap's attack
+		void	guardGate();							// Exclusive method
 };
 
 #endif
