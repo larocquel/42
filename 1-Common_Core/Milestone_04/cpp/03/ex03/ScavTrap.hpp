@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 09:41:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/05 17:10:07 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:45:59 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : virtual public ClapTrap	// DÚVIDA: Esse virtual permite que duas classes derivem da mesma base "Filhas da mesma Mãe"?
+class	ScavTrap : virtual public ClapTrap	// "virtual" allow a lot of derived classes from a base one, "infinite kids from the same mother"
 {
 	public:
 		// OCF
