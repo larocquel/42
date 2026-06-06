@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 14:02:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 18:44:29 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/06 18:41:25 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/06 20:22:54 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Cat.hpp
+// WrongCat.hpp
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		// OCF
-		Cat();
-		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other);
-		~Cat();
+		WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat&	operator=(const WrongCat& other);
+		~WrongCat();
 
-		// Method
 		void	makeSound() const;
 };
 

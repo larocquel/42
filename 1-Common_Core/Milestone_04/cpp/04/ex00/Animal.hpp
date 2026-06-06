@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 11:56:11 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 16:53:59 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 18:46:44 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,20 @@
 class Animal
 {
 	protected:
-	std::string	_type;
+		std::string	_type;
 
 	public:
-	// Ortodox Canonical Form
-	Animal();
-	Animal(const Animal& other);
-	Animal&	operator=(const Animal& other);
-	virtual	~Animal();
+		// Ortodox Canonical Form
+		Animal();
+		Animal(const Animal& other);
+		Animal&	operator=(const Animal& other);
+		virtual	~Animal();
 
-	// Getter
-	std::string	getType(void) const;
+		// Getter
+		std::string	getType(void) const;
 
-	// Methods
-	virtual	void	makeSound() const;
+		// Method
+		virtual	void	makeSound() const;
 };
 
 #endif

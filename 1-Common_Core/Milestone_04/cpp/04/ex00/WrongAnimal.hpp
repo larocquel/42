@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 17:24:51 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 17:26:43 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:20:49 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,19 @@ class WrongAnimal
 {
 	protected:
 		std::string	_type;
+
 	public:
-		
+		// OCF
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal&	operator=(const WrongAnimal& other);
+		~WrongAnimal();
+
+		// Getter
+		std::string	getType(void) const;
+
+		// Method
+		void	makeSound() const;
 };
 
 #endif

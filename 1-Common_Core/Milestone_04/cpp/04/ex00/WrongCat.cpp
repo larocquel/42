@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 14:05:43 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:23:33 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/06 19:35:18 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/06 20:24:39 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Animal.cpp
+// WrongCat.cpp
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-// Default Constructor:
-Animal::Animal() : _type("Default")
+// Constructor:
+WrongCat::WrongCat()
 {
-	std::cout << "Constructor: Animal was born!" << std::endl;
+	_type = "WrongCat";
+	std::cout << "Constructor: WrongCat was born!" << std::endl;
 }
 
 // Copy Constructor:
-Animal::Animal(const Animal& other)
+WrongCat::WrongCat(const WrongCat& other)
 {
-	std::cout << "Copy Constructor: Animal was born!" << std::endl;
+	std::cout << "Copy Constructor: WrongCat was born!" << std::endl;
 	*this = other;
 }
 
 // Copy Assignment Operator:
-Animal&			Animal::operator=(const Animal& other)
+WrongCat&	WrongCat::operator=(const WrongCat& other)
 {
 	if (this != &other)
 	{
@@ -38,19 +39,14 @@ Animal&			Animal::operator=(const Animal& other)
 }
 
 // Destructor:
-Animal::~Animal()
+WrongCat::~WrongCat()
 {
-	std::cout << "Destructor: Animal died!" << std::endl;
+	std::cout << "Destructor: WrongCat died!" << std::endl;
+
 }
 
-// Getter
-std::string		Animal::getType(void) const
+// Method:
+void	WrongCat::makeSound() const
 {
-	return(this->_type);
-}
-
-// Methods
-void	Animal::makeSound() const
-{
-	std::cout << "Animal: WELCOME TO THE JUNGLE!" << std::endl;
+	std::cout << "WrongCat: MIAU!" << std::endl;
 }

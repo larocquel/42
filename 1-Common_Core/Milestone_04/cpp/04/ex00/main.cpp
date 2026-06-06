@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 11:55:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 17:11:56 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:21:26 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -32,6 +34,17 @@ int main()
     delete meta;
     delete j;
     delete i;
+
+    std::cout << "\n--- TESTANDO WRONG ANIMAL ---" << std::endl;
+    const WrongAnimal* wrongMeta = new WrongAnimal();
+    const WrongAnimal* wrongI = new WrongCat();
+
+    std::cout << wrongI->getType() << " " << std::endl;
+    wrongI->makeSound();
+    wrongMeta->makeSound();
+
+    delete wrongMeta;
+    delete wrongI;
 
     return 0;
 }

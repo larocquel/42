@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:05:49 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 17:17:53 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:24:19 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 Dog::Dog()
 {
 	_type = "Dog";
-	std::cout << "Constructor: A Dog was born!" << std::endl;
+	std::cout << "Constructor: Dog was born!" << std::endl;
 }
 
 // Copy Constructor:
 Dog::Dog(const Dog& other)
 {
-	std::cout << "Copy Constructor: A Dog was born!" << std::endl;
+	std::cout << "Copy Constructor: Dog was born!" << std::endl;
 	*this = other;
 }
 

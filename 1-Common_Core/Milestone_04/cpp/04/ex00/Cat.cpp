@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:06:01 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 17:18:08 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:24:06 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 Cat::Cat()
 {
 	_type = "Cat";
-	std::cout << "Constructor: A Cat was born!" << std::endl;
+	std::cout << "Constructor: Cat was born!" << std::endl;
 }
 
 // Copy Constructor:
 Cat::Cat(const Cat& other)
 {
-	std::cout << "Copy Constructor: A Cat was born!" << std::endl;
+	std::cout << "Copy Constructor: Cat was born!" << std::endl;
 	*this = other;
 }
 
