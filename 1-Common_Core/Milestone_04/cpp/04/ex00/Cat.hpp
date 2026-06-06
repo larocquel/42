@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:02:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 14:05:07 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 17:05:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 
 # include "Animal.hpp"
 
-class CAT : public Animal
+class Cat : public Animal
 {
 	public:
 	// OCF
 	Cat();
 	Cat(const Cat& other);
 	Cat&	operator=(const Cat& other);
-	virtual ~Cat();
+	~Cat();
 
 	// Method
-	void	makeSound();
+	void	makeSound() const;
 };
 
 #endif

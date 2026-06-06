@@ -6,10 +6,9 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:43:14 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 13:59:01 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 16:54:05 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 // Dog.hpp
 
@@ -28,7 +27,7 @@ class Dog : public Animal
 	~Dog();
 
 	// Method
-	void	makeSound();
+	void	makeSound() const;
 };
 
 #endif

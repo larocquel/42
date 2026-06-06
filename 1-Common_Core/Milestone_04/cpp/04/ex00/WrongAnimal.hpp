@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 11:56:11 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 16:53:59 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/06 17:24:51 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/06 17:26:43 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Animal.hpp
+// WrongAnimal.hpp
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <string>
 # include <iostream>
 
-class Animal
+class WrongAnimal
 {
 	protected:
-	std::string	_type;
-
+		std::string	_type;
 	public:
-	// Ortodox Canonical Form
-	Animal();
-	Animal(const Animal& other);
-	Animal&	operator=(const Animal& other);
-	virtual	~Animal();
-
-	// Getter
-	std::string	getType(void) const;
-
-	// Methods
-	virtual	void	makeSound() const;
+		
 };
 
 #endif
