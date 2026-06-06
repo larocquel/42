@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:02:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 18:44:29 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:49:30 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@
 class Cat : public Animal
 {
 	public:
-		// OCF
 		Cat();
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
 		~Cat();
 
-		// Method
+		// Overridden Method
 		void	makeSound() const;
 };
 

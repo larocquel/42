@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:05:49 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:24:19 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:53:04 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 #include "Dog.hpp"
 
-// Constructor:
+// Constructor
 Dog::Dog()
 {
 	_type = "Dog";
 	std::cout << "Constructor: Dog was born!" << std::endl;
 }
 
-// Copy Constructor:
+// Copy Constructor
 Dog::Dog(const Dog& other)
 {
 	std::cout << "Copy Constructor: Dog was born!" << std::endl;
 	*this = other;
 }
 
-// Copy Assignment Operator:
+// Copy Assignment Operator
 Dog&	Dog::operator=(const Dog& other)
 {
 	if (this != &other)
@@ -38,14 +38,14 @@ Dog&	Dog::operator=(const Dog& other)
 	return (*this);
 }
 
-// Destructor:
+// Destructor
 Dog::~Dog()
 {
 	std::cout << "Destructor: Dog died!" << std::endl;
 
 }
 
-// Method:
+// Method
 void	Dog::makeSound() const
 {
 	std::cout << "Dog: AUAU!" << std::endl;

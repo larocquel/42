@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 11:56:11 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 18:46:44 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:47:07 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ class Animal
 		Animal();
 		Animal(const Animal& other);
 		Animal&	operator=(const Animal& other);
-		virtual	~Animal();
+		virtual	~Animal();		// Virtual is critical for proper cleanup
 
 		// Getter
 		std::string	getType(void) const;
 
-		// Method
+		// Polymorphic Method
 		virtual	void	makeSound() const;
 };
 

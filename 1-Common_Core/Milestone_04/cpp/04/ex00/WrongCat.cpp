@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:35:18 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:24:39 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/06 20:53:35 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 #include "WrongCat.hpp"
 
-// Constructor:
+// Constructor
 WrongCat::WrongCat()
 {
 	_type = "WrongCat";
 	std::cout << "Constructor: WrongCat was born!" << std::endl;
 }
 
-// Copy Constructor:
+// Copy Constructor
 WrongCat::WrongCat(const WrongCat& other)
 {
 	std::cout << "Copy Constructor: WrongCat was born!" << std::endl;
 	*this = other;
 }
 
-// Copy Assignment Operator:
+// Copy Assignment Operator
 WrongCat&	WrongCat::operator=(const WrongCat& other)
 {
 	if (this != &other)
@@ -38,14 +38,14 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 	return (*this);
 }
 
-// Destructor:
+// Destructor
 WrongCat::~WrongCat()
 {
 	std::cout << "Destructor: WrongCat died!" << std::endl;
 
 }
 
-// Method:
+// Method
 void	WrongCat::makeSound() const
 {
 	std::cout << "WrongCat: MIAU!" << std::endl;
