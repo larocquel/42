@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 12:05:09 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 14:29:28 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:38:53 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Dog::Dog()
 }
 
 // Copy Constructor
-Dog::Dog(const Dog& other)
+Dog::Dog(const Dog& other) : Animal(other)
 {
 	std::cout << "Copy Constructor: Dog" << std::endl;
 	*this = other;

@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 12:16:10 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 13:39:18 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:39:24 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cat::Cat()
 }
 
 // Copy Constructor
-Cat::Cat(const Cat& other)
+Cat::Cat(const Cat& other) : Animal(other)
 {
 	std::cout << "Copy Constructor: Cat" << std::endl;
 	*this = other;

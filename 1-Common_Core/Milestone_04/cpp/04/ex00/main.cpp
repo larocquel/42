@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 13:20:43 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 14:34:29 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:43:42 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	main()
 	delete WA;
 	std::cout << std::endl;
 	delete WC;
+	std::cout << "Note: The WrongCat destructor is not being called." << std::endl;
 
 	return (0);
 }

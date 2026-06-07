@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 13:54:34 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 14:32:41 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:39:47 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ WrongCat::WrongCat()
 }
 
 // Copy Constructor
-WrongCat::WrongCat(const WrongCat& other)
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
 	std::cout << "Copy Constructor: WrongCat" << std::endl;
 	*this = other;
