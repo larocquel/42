@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 19:35:18 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:53:35 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 13:54:34 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:55:39 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 #include "WrongCat.hpp"
 
-// Constructor
+// Default Constructor
 WrongCat::WrongCat()
 {
-	_type = "WrongCat";
-	std::cout << "Constructor: WrongCat was born!" << std::endl;
+	std::cout << "Constructor: WrongCat" << std::endl;
+	type = "WrongCat";
 }
 
 // Copy Constructor
 WrongCat::WrongCat(const WrongCat& other)
 {
-	std::cout << "Copy Constructor: WrongCat was born!" << std::endl;
+	std::cout << "Copy Constructor: WrongCat" << std::endl;
 	*this = other;
 }
 
 // Copy Assignment Operator
-WrongCat&	WrongCat::operator=(const WrongCat& other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
 	if (this != &other)
 	{
-		this->_type = other._type;
+		this->type = other.type;
 	}
 	return (*this);
 }
@@ -41,12 +41,11 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 // Destructor
 WrongCat::~WrongCat()
 {
-	std::cout << "Destructor: WrongCat died!" << std::endl;
-
+	std::cout << "Destructor: WrongCat" << std::endl;
 }
 
 // Method
 void	WrongCat::makeSound() const
 {
-	std::cout << "WrongCat: MIAU!" << std::endl;
+	std::cout << "MEOWTH MEOWTH" << std::endl;
 }

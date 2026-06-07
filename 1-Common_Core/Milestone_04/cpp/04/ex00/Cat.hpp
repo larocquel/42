@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 14:02:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:49:30 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 12:15:14 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 12:15:40 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
-		~Cat();
+		virtual	~Cat();
 
-		// Overridden Method
-		void	makeSound() const;
+		virtual	void	makeSound() const;
 };
 
 #endif

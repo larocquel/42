@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 14:05:49 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:53:04 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 12:05:09 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:39:09 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 #include "Dog.hpp"
 
-// Constructor
+// Default Constructor
 Dog::Dog()
 {
-	_type = "Dog";
-	std::cout << "Constructor: Dog was born!" << std::endl;
+	std::cout << "Constructor: Dog" << std::endl;
+	type = "Dog";
 }
 
 // Copy Constructor
 Dog::Dog(const Dog& other)
 {
-	std::cout << "Copy Constructor: Dog was born!" << std::endl;
+	std::cout << "Copy Constructor: Dog" << std::endl;
 	*this = other;
 }
 
 // Copy Assignment Operator
-Dog&	Dog::operator=(const Dog& other)
+Dog& Dog::operator=(const Dog& other)
 {
 	if (this != &other)
 	{
-		this->_type = other._type;
+		this->type = other.type;
 	}
 	return (*this);
 }
@@ -41,12 +41,11 @@ Dog&	Dog::operator=(const Dog& other)
 // Destructor
 Dog::~Dog()
 {
-	std::cout << "Destructor: Dog died!" << std::endl;
-
+	std::cout << "Destructor: Dog" << std::endl;
 }
 
 // Method
 void	Dog::makeSound() const
 {
-	std::cout << "Dog: AUAU!" << std::endl;
+	std::cout << "WOOF" << std::endl;
 }

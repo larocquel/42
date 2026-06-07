@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 11:55:22 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 21:03:16 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 13:20:43 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 14:00:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,74 +18,52 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main()
+int	main()
 {
-	std::cout << "==================================================" << std::endl;
-	std::cout << "       STAGE 1: CREATING POLYMORPHIC ANIMALS      " << std::endl;
-	std::cout << "==================================================" << std::endl;
-
-	std::cout << "[Creating Animal A...]" << std::endl;
+	std::cout << "------1. INSTANCIAR------"<< std::endl;
 	const Animal* A = new Animal();
-
-	std::cout << "\n[Creating Dog D pointed by Animal*...]" << std::endl;
+	std::cout << std::endl;
 	const Animal* D = new Dog();
-
-	std::cout << "\n[Creating Cat C pointed by Animal*...]" << std::endl;
+	std::cout << std::endl;
 	const Animal* C = new Cat();
-
-	std::cout << "\n==================================================" << std::endl;
-	std::cout << "       STAGE 2: TESTING TYPES AND SOUNDS          " << std::endl;
-	std::cout << "==================================================" << std::endl;
-
-	std::cout << "Dog pointer type report:  " << D->getType() << std::endl;
-	std::cout << "Cat pointer type report:  " << C-> getType() << std::endl;
-	std::cout << "A pointer type report: " << A->getType() << std::endl;
-
-	std::cout << "\n[Calling makeSound() - Dynamic Binding in action]" << std::endl;
-	std::cout << "C (Cat ptr) -> "; C-> makeSound();
-	std::cout << "D (Dog ptr) -> "; D->makeSound();
-	std::cout << "A (Animal) -> "; A->makeSound();
-
-	std::cout << "\n==================================================" << std::endl;
-	std::cout << "       STAGE 3: DELETING POLYMORPHIC ANIMALS      " << std::endl;
-	std::cout << "==================================================" << std::endl;
-
-	std::cout << "[Deleting A...]" << std::endl;
-	delete A;
-
-	std::cout << "\n[Deleting D (Dog)...]" << std::endl;
-	delete D;
-
-	std::cout << "\n[Deleting C (Cat)...]" << std::endl;
-	delete C;
-
-	std::cout << "\n==================================================" << std::endl;
-	std::cout << "       STAGE 4: TESTING WRONG ANIMALS (NO VIRTUAL) " << std::endl;
-	std::cout << "==================================================" << std::endl;
-
-	std::cout << "[Creating WrongAnimal WA...]" << std::endl;
+	std::cout << std::endl;
 	const WrongAnimal* WA = new WrongAnimal();
-
-	std::cout << "\n[Creating WrongCat WC pointed by WrongAnimal*...]" << std::endl;
+	std::cout << std::endl;
 	const WrongAnimal* WC = new WrongCat();
+	std::cout << std::endl;
 
-	std::cout << "\nWC pointer type report: " << WC-> getType() << std::endl;
+	std::cout << "------2. TIPOS------"<< std::endl;
+	std::cout << "Animal Type : " << A->getType() << std::endl;
+	std::cout << "Dog Type    : " << D->getType() << std::endl;
+	std::cout << "Cat Type    : " << C->getType() << std::endl;
+	std::cout << "WAnimal Type: " << WA->getType() << std::endl;
+	std::cout << "WCat Type   : " << WC->getType() << std::endl;
 
-	std::cout << "\n[Calling makeSound() - Static Binding in action]" << std::endl;
-	std::cout << "WC (WrongCat ptr) -> "; WC-> makeSound();
-	std::cout << "WA (WrongAnimal) -> "; WA->makeSound();
+	std::cout << std::endl;
 
-	std::cout << "\n==================================================" << std::endl;
-	std::cout << "       STAGE 5: DELETING WRONG ANIMALS            " << std::endl;
-	std::cout << "==================================================" << std::endl;
+	std::cout << "------3. SONS------"<< std::endl;
+	std::cout << "Animal Sound    : ";
+	A->makeSound();
+	std::cout << "Dog Sound       : ";
+	D->makeSound();
+	std::cout << "Cat Sound       : ";
+	C->makeSound();
+	std::cout << "WAnimal Sound   : ";
+	WA->makeSound();
+	std::cout << "WCat Sound      : ";
+	WC->makeSound();
+	std::cout << std::endl;
 
-	std::cout << "[Deleting WA...]" << std::endl;
+	std::cout << "------4. DELETAR------"<< std::endl;
+	delete A;
+	std::cout << std::endl;
+	delete D;
+	std::cout << std::endl;
+	delete C;
+	std::cout << std::endl;
 	delete WA;
-
-	std::cout << "\n[Deleting WC (WrongCat) - Notice missing subclass destructor!]" << std::endl;
+	std::cout << std::endl;
 	delete WC;
-
-	std::cout << "==================================================" << std::endl;
-
+	
 	return (0);
 }

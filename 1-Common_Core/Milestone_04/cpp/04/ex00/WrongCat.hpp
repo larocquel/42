@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 18:41:25 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:22:54 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 13:53:01 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:54:21 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // WrongCat.hpp
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+// WrongCat.hpp
+
+#ifndef WrongCat_HPP
+# define WrongCat_HPP
 
 # include "WrongAnimal.hpp"
 

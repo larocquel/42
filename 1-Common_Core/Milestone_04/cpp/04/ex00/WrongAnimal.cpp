@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 19:35:00 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:53:19 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 13:52:04 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:55:28 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 #include "WrongAnimal.hpp"
 
 // Default Constructor
-WrongAnimal::WrongAnimal() : _type("Default")
+WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
-	std::cout << "Constructor: WrongAnimal was born!" << std::endl;
+	std::cout << "Constructor: WrongAnimal" << std::endl;
 }
 
 // Copy Constructor
 WrongAnimal::WrongAnimal(const WrongAnimal& other)
 {
-	std::cout << "Copy Constructor: WrongAnimal was born!" << std::endl;
+	std::cout << "Copy Constructor: WrongAnimal" << std::endl;
 	*this = other;
 }
 
 // Copy Assignment Operator
-WrongAnimal&			WrongAnimal::operator=(const WrongAnimal& other)
+WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other)
 {
 	if (this != &other)
 	{
-		this->_type = other._type;
+		this->type = other.type;
 	}
 	return (*this);
 }
@@ -40,17 +40,17 @@ WrongAnimal&			WrongAnimal::operator=(const WrongAnimal& other)
 // Destructor
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Destructor: WrongAnimal died!" << std::endl;
+	std::cout << "Destructor: WrongAnimal" << std::endl;
+}
+
+// Method
+void	WrongAnimal::makeSound() const
+{
+	std::cout << "THE JUNGLE IS NOT FRIENDLY" << std::endl;
 }
 
 // Getter
-std::string		WrongAnimal::getType(void) const
+std::string	WrongAnimal::getType() const
 {
-	return(this->_type);
-}
-
-// Methods
-void	WrongAnimal::makeSound() const
-{
-	std::cout << "WrongAnimal: WELCOME TO THE JUNGLE!" << std::endl;
+	return(type);
 }

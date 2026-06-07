@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 17:24:51 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:51:42 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 13:47:45 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:51:17 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,15 @@
 class WrongAnimal
 {
 	protected:
-		std::string	_type;
-
+		std::string type;
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal&	operator=(const WrongAnimal& other);
-		~WrongAnimal(); // Non-virtual on purpose to demonstrate fails
-
-		// Getter
-		std::string	getType(void) const;
-
-		// Non-virtual Method to demonstrate Static Binding
-		void	makeSound() const;
+		~WrongAnimal();
+		
+		void		makeSound() const;
+		std::string	getType() const;
 };
 
 #endif

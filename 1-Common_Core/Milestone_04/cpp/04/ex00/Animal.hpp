@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 11:56:11 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:47:07 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 10:53:55 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 11:58:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,16 @@
 class Animal
 {
 	protected:
-		std::string	_type;
+		std::string	type;
 
 	public:
-		// Ortodox Canonical Form
 		Animal();
 		Animal(const Animal& other);
 		Animal&	operator=(const Animal& other);
-		virtual	~Animal();		// Virtual is critical for proper cleanup
+		virtual	~Animal();
 
-		// Getter
-		std::string	getType(void) const;
-
-		// Polymorphic Method
 		virtual	void	makeSound() const;
+		std::string		getType() const;
 };
 
 #endif

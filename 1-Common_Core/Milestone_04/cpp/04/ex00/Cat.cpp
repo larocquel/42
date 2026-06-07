@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 14:06:01 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:53:12 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 12:16:10 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 13:39:18 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 #include "Cat.hpp"
 
-// Constructor
+// Default Constructor
 Cat::Cat()
 {
-	_type = "Cat";
-	std::cout << "Constructor: Cat was born!" << std::endl;
+	std::cout << "Constructor: Cat" << std::endl;
+	type = "Cat";
 }
 
 // Copy Constructor
 Cat::Cat(const Cat& other)
 {
-	std::cout << "Copy Constructor: Cat was born!" << std::endl;
+	std::cout << "Copy Constructor: Cat" << std::endl;
 	*this = other;
 }
 
 // Copy Assignment Operator
-Cat&	Cat::operator=(const Cat& other)
+Cat& Cat::operator=(const Cat& other)
 {
 	if (this != &other)
 	{
-		this->_type = other._type;
+		this->type = other.type;
 	}
 	return (*this);
 }
@@ -41,12 +41,11 @@ Cat&	Cat::operator=(const Cat& other)
 // Destructor
 Cat::~Cat()
 {
-	std::cout << "Destructor: Cat died!" << std::endl;
-
+	std::cout << "Destructor: Cat" << std::endl;
 }
 
 // Method
 void	Cat::makeSound() const
 {
-	std::cout << "Cat: MIAU!" << std::endl;
+	std::cout << "MEOW" << std::endl;
 }

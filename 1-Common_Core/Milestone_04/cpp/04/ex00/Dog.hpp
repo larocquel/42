@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 13:43:14 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/06 20:48:35 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/07 12:02:33 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/07 12:12:55 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog& other);
 		Dog&	operator=(const Dog& other);
-		~Dog();
+		virtual	~Dog();
 
-		// Overridden Method
-		void	makeSound() const;
+		virtual	void	makeSound() const;
 };
 
 #endif
