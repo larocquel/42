@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 13:20:43 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 14:00:36 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:34:29 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int	main()
 {
-	std::cout << "------1. INSTANCIAR------"<< std::endl;
+	std::cout << "------1. INSTANTIATE------" << std::endl;
 	const Animal* A = new Animal();
 	std::cout << std::endl;
 	const Animal* D = new Dog();
@@ -32,16 +32,15 @@ int	main()
 	const WrongAnimal* WC = new WrongCat();
 	std::cout << std::endl;
 
-	std::cout << "------2. TIPOS------"<< std::endl;
+	std::cout << "------2. TYPES------" << std::endl;
 	std::cout << "Animal Type : " << A->getType() << std::endl;
 	std::cout << "Dog Type    : " << D->getType() << std::endl;
 	std::cout << "Cat Type    : " << C->getType() << std::endl;
 	std::cout << "WAnimal Type: " << WA->getType() << std::endl;
 	std::cout << "WCat Type   : " << WC->getType() << std::endl;
-
 	std::cout << std::endl;
 
-	std::cout << "------3. SONS------"<< std::endl;
+	std::cout << "------3. SOUNDS------" << std::endl;
 	std::cout << "Animal Sound    : ";
 	A->makeSound();
 	std::cout << "Dog Sound       : ";
@@ -54,7 +53,7 @@ int	main()
 	WC->makeSound();
 	std::cout << std::endl;
 
-	std::cout << "------4. DELETAR------"<< std::endl;
+	std::cout << "------4. DELETE------" << std::endl;
 	delete A;
 	std::cout << std::endl;
 	delete D;
@@ -64,6 +63,6 @@ int	main()
 	delete WA;
 	std::cout << std::endl;
 	delete WC;
-	
+
 	return (0);
 }

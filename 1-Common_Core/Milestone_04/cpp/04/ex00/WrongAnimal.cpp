@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 13:52:04 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 13:55:28 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:31:45 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void	WrongAnimal::makeSound() const
 // Getter
 std::string	WrongAnimal::getType() const
 {
-	return(type);
+	return(this->type);
 }

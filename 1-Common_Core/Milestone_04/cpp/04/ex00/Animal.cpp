@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:57:52 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 13:39:25 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:31:30 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void	Animal::makeSound() const
 // Getter
 std::string	Animal::getType() const
 {
-	return(type);
+	return(this->type);
 }

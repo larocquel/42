@@ -6,16 +6,14 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 13:53:01 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 13:54:21 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 14:32:19 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // WrongCat.hpp
 
-// WrongCat.hpp
-
-#ifndef WrongCat_HPP
-# define WrongCat_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 
