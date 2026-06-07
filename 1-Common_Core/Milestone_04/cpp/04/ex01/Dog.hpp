@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 23:09:29 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 23:09:31 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/07 23:53:12 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@
 # define DOG_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog : public Animal
 {
+	private:
+		Brain*	_brain;
+	
 	public:
 		Dog();
 		Dog(const Dog& other);

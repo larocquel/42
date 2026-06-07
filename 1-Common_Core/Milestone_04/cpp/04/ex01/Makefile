@@ -6,7 +6,7 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/07 20:01:23 by leoaguia          #+#    #+#              #
-#    Updated: 2026/06/07 23:08:04 by leoaguia         ###   ########.fr        #
+#    Updated: 2026/06/08 00:28:45 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME		=	brain
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS		=	main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJSDIR		=	obj/
 OBJS		=	$(addprefix $(OBJSDIR), $(SRCS:.cpp=.o))
 
@@ -27,9 +27,9 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 $(OBJSDIR)%.o: %.cpp | $(OBJSDIR)
-	$(CXX) $(CXXFLAGS) -c <$ -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(OBJSDIR)
+$(OBJSDIR):
 	mkdir -p $(OBJSDIR)
 
 clean:

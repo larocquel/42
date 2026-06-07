@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/07 23:09:37 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 23:09:40 by leoaguia         ###   ########.fr       */
+/*   Created: 2024/06/07 23:09:37 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/08 00:40:47 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,55 +15,37 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int	main()
 {
 	std::cout << "------1. INSTANTIATE------" << std::endl;
-	const Animal* A = new Animal();
-	std::cout << std::endl;
-	const Animal* D = new Dog();
-	std::cout << std::endl;
-	const Animal* C = new Cat();
-	std::cout << std::endl;
-	const WrongAnimal* WA = new WrongAnimal();
-	std::cout << std::endl;
-	const WrongAnimal* WC = new WrongCat();
+
+	Animal*	animals[4];
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (i < 2)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+		std::cout << std::endl;
+	}
+
+	std::cout << "-----2. TYPES & SOUNDS----" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << i << " - " << animals[i]->getType() << " sound: " ;
+		animals[i]->makeSound();
+	}
 	std::cout << std::endl;
 
-	std::cout << "------2. TYPES------" << std::endl;
-	std::cout << "Animal Type : " << A->getType() << std::endl;
-	std::cout << "Dog Type    : " << D->getType() << std::endl;
-	std::cout << "Cat Type    : " << C->getType() << std::endl;
-	std::cout << "WAnimal Type: " << WA->getType() << std::endl;
-	std::cout << "WCat Type   : " << WC->getType() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "------3. SOUNDS------" << std::endl;
-	std::cout << "Animal Sound    : ";
-	A->makeSound();
-	std::cout << "Dog Sound       : ";
-	D->makeSound();
-	std::cout << "Cat Sound       : ";
-	C->makeSound();
-	std::cout << "WAnimal Sound   : ";
-	WA->makeSound();
-	std::cout << "WCat Sound      : ";
-	WC->makeSound();
-	std::cout << std::endl;
-
-	std::cout << "------4. DELETE------" << std::endl;
-	delete A;
-	std::cout << std::endl;
-	delete D;
-	std::cout << std::endl;
-	delete C;
-	std::cout << std::endl;
-	delete WA;
-	std::cout << std::endl;
-	delete WC;
-	std::cout << "Note: The WrongCat destructor is not being called." << std::endl;
+	std::cout << "--------4. DELETE---------" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		delete animals[i];
+		std::cout << std::endl;
+	}
 
 	return (0);
 }
