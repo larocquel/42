@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 20:07:05 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 22:52:36 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/08 09:30:08 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,5 @@ const std::string&	Brain::getIdea(int index) const
 	{
 		return (this->_ideas[index]);
 	}
-	else
-	{
-		return (this->_ideas[0]);
-	}
+	return (this->_ideas[0]);
 }

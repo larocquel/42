@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 20:01:40 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/07 22:52:26 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/08 09:29:05 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class Brain
 		Brain&	operator=(const Brain& other);
 		~Brain();
 
-		void				setIdea(int index, const std::string& ideas); // Dúvida: Pq tanto para o setter quanto para o getter foi usado referência ao ideas ao invés de um ponteiro?
-		const std::string&	getIdea(int index) const; // Dúvida: const antes e depois, WTF?
+		void				setIdea(int index, const std::string& ideas);
+		const std::string&	getIdea(int index) const;
 };
 
 #endif
