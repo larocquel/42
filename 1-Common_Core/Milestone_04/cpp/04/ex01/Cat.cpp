@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 23:09:04 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/08 09:33:25 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/08 11:07:59 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 // Default Constructor
 Cat::Cat()
 {
+	std::cout << "Constructor: Cat" << std::endl;
 	type = "Cat";
 	this->_brain = new Brain();
-	std::cout << "Constructor: Cat" << std::endl;
 }
 
 // Copy Constructor
 Cat::Cat(const Cat& other) : Animal(other)
 {
-	this->_brain = new Brain(*other._brain);
 	std::cout << "Copy Constructor: Cat" << std::endl;
+	this->_brain = new Brain(*other._brain);
 }
 
 // Copy Assignment Operator
