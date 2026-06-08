@@ -6,7 +6,7 @@
 #    By: leoaguia <leoaguia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/07 20:01:23 by leoaguia          #+#    #+#              #
-#    Updated: 2026/06/08 00:28:45 by leoaguia         ###   ########.fr        #
+#    Updated: 2026/06/08 01:02:30 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ clean:
 	rm -rf $(OBJSDIR)
 
 fclean: clean
-	rm -r $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
