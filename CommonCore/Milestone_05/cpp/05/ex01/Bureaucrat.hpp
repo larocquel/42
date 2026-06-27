@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:33:47 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/25 20:33:56 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/27 19:44:25 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-# include <iostream>
 # include <string>
 # include <exception>
+# include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -42,6 +44,7 @@ class Bureaucrat
 		// Methods
 		void		incrementGrade();
 		void		decrementGrade();
+		void		signForm(Form& form);
 
 		// Exceptions (Nested Classes)
 		class GradeTooHighException : public std::exception

@@ -6,24 +6,25 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:33:27 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/25 20:33:38 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/27 20:07:14 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Bureaucrat.cpp
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 // Default Constructor
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
-	std::cout << "Bureaucrat Constructor: Default" << std::endl;
+	std::cout << "Default Constructor: Bureaucrat" << std::endl;
 }
 
 // Copy Constructor
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(other._grade)
 {
-	std::cout << "Bureaucrat Constructor: Copy" << std::endl;
+	std::cout << "Copy Constructor: Bureaucrat" << std::endl;
 }
 
 // Copy Operator
@@ -39,13 +40,13 @@ Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other)
 // Destructor
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat Destructor" << std::endl;
+	std::cout << "Destructor: Bureaucrat" << std::endl;
 }
 
 // Parametrized Constructor
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name), _grade(grade)
 {
-	std::cout << "Bureaucrat Constructor: Parametrized" << std::endl;
+	std::cout << "Parametrized Constructor: Bureaucrat" << std::endl;
 
 	if (grade < 1)
 	{
@@ -85,6 +86,20 @@ void	Bureaucrat::decrementGrade()
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	++_grade;
+}
+
+// Sign Method
+void		Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 // High Grade Exception

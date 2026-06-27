@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:34:52 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/26 01:57:11 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/27 19:26:50 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 #ifndef FORM_HPP
 # define FORM_HPP
 
-# include "Bureaucrat.hpp"
+# include <string>
+# include <exception>
+# include <iostream>
+
+class Bureaucrat;
 
 class Form
 {
@@ -33,7 +37,7 @@ class Form
 		~Form();
 
 		// Parametrized Constructor
-		Form(std::string &name, int gradeToSign, int gradeToExecute);
+		Form(const std::string &name, int gradeToSign, int gradeToExecute);
 
 		// Getters
 		std::string	getName() const;
@@ -41,9 +45,8 @@ class Form
 		int			getGradeToSign() const;
 		int			getGradeToExecute() const;
 
-		// Methods
-		bool		isValid(int grade);
-		void		beSigned(Bureaucrat& b);
+		// Method
+		void		beSigned(const Bureaucrat& b);
 
 		// Exceptions
 		class GradeTooHighException : public std::exception
