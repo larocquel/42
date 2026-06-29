@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:19:57 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 14:36:43 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/29 23:36:42 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	RobotomyRequestForm::execute(const Bureaucrat& executor) const
 	}
 	else
 	{
-		std::cout << "The robotomy on " << _target << " failed horribly." << std::endl;
+		std::cout << "The robotomy on " << _target << " failed." << std::endl;
 	}
 }
 
