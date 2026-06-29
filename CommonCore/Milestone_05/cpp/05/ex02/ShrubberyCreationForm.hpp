@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:19:26 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 02:58:50 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/29 14:38:01 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,21 @@
 class ShrubberyCreationForm : public AForm
 {
 	private:
-		// Attributes
+		// Attribute
 		std::string	_target;
 
 	public:
 		// OCF
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(const ShrubberryCreationForm& other);
-		ShrubberyCreationForm&	operator=(const ShrubberryCreationForm& other);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& other);
 		~ShrubberyCreationForm();
 
-		// Virtual Pure Method from Base Class
-		void execute(const Bureaucrat& executor) const;
+		// Parametrized Constructor
+		ShrubberyCreationForm(const std::string& target);
 
+		// Virtual Pure Method from Base Class
+		void	execute(const Bureaucrat& executor) const;
 };
 
 #endif
