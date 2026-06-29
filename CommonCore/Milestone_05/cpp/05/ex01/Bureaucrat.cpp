@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:33:27 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/27 20:07:14 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/27 22:14:37 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,20 @@ int			Bureaucrat::getGrade() const
 	return (_grade);
 }
 
+// Sign Method
+void		Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
+
 // Increment Method
 void	Bureaucrat::incrementGrade()
 {
@@ -86,20 +100,6 @@ void	Bureaucrat::decrementGrade()
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	++_grade;
-}
-
-// Sign Method
-void		Bureaucrat::signForm(Form& form)
-{
-	try
-	{
-		form.beSigned(*this);
-		std::cout << this->_name << " signed " << form.getName() << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
-	}
 }
 
 // High Grade Exception

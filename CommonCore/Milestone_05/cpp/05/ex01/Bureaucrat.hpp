@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:33:47 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/27 19:44:25 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/27 22:14:18 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ class Bureaucrat
 		int			getGrade() const;
 
 		// Methods
+		void		signForm(Form& form);
 		void		incrementGrade();
 		void		decrementGrade();
-		void		signForm(Form& form);
 
 		// Exceptions (Nested Classes)
 		class GradeTooHighException : public std::exception

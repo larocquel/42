@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 20:34:52 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/27 22:12:56 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/06/27 22:18:41 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/06/29 02:13:20 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Form.hpp
+// AForm.hpp
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <string>
 # include <exception>
@@ -21,9 +21,10 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
+		// Attributes
 		const std::string	_name;
 		bool				_isSigned;
 		const int			_gradeToSign;
@@ -31,13 +32,13 @@ class Form
 
 	public:
 		// OCF
-		Form();
-		Form(const Form &other);
-		Form&	operator=(const Form &other);
-		~Form();
+		AForm();
+		AForm(const AForm& other);
+		AForm&	operator=(const AForm& other);
+		virtual ~AForm();
 
 		// Parametrized Constructor
-		Form(const std::string &name, int gradeToSign, int gradeToExecute);
+		AForm(const std::string& name, int gradeToSign, int gradeToExecute);
 
 		// Getters
 		std::string	getName() const;
@@ -45,14 +46,19 @@ class Form
 		int			getGradeToSign() const;
 		int			getGradeToExecute() const;
 
-		// Method
+		// Methods
 		void		beSigned(const Bureaucrat& b);
+		void		executeRequirements(const Bureaucrat& executor) const;
+
+
+		// Virtual Pure Function
+		virtual void execute(const Bureaucrat& executor) const = 0;
 
 		// Exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:
-				virtual const char*	what() const throw();
+				virtual const char* what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception
@@ -60,9 +66,15 @@ class Form
 			public:
 				virtual const char* what() const throw();
 		};
+
+		class NotSignedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
 };
 
-// Overload Insertion (<<) Operator
-std::ostream&	operator<<(std::ostream& os, const Form& obj);
+// Insert Operator Overload
+std::ostream&	operator<<(std::ostream& os, const AForm& obj);
 
 #endif
