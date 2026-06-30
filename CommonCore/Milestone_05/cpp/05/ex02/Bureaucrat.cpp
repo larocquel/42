@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:18:19 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/30 00:18:10 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:12:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 
-// Default Constructor
+// Default Constructor: Initializes a Bureaucrat with default name and lowest grade
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
 	std::cout << "Default Constructor: Bureaucrat" << std::endl;
 }
 
-// Copy Constructor
+// Copy Constructor: Creates a new Bureaucrat as a copy of another
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(other._grade)
 {
 	std::cout << "Copy Constructor: Bureaucrat" << std::endl;
 }
 
-// Copy Operator
+// Copy Assignment Operator: Copy the grade (mutable value) of one Bureaucrat to another
 Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other)
 {
 	if (this != &other)
@@ -37,13 +37,13 @@ Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other)
 	return (*this);
 }
 
-// Destructor
+// Destructor: Cleans up the Bureaucrat object upon deletion or going out of scope
 Bureaucrat::~Bureaucrat()
 {
 	std::cout << "Destructor: Bureaucrat" << std::endl;
 }
 
-// Parametrized Constructor
+// Parametrized Constructor: Creates an obj with the parameters passed and validates the grade
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name), _grade(grade)
 {
 	std::cout << "Parametrized Constructor: Bureaucrat" << std::endl;
@@ -70,35 +70,35 @@ int			Bureaucrat::getGrade() const
 	return (_grade);
 }
 
-// Execute Method
-void Bureaucrat::executeForm(const AForm& form) const
+// Execute Form Method: Attempts to execute a form, catching and printing exceptions if requirements fail
+void Bureaucrat::executeAForm(const AForm& aform) const
 {
 	try
 	{
-		form.execute(*this);
-		std::cout << this->_name << " executed " << form.getName() << std::endl;
+		aform.execute(*this);
+		std::cout << this->_name << " executed " << aform.getName() << std::endl;
 	}
 	catch (std::exception& e)
 	{
-		std::cout << this->_name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+		std::cout << this->_name << " couldn't execute " << aform.getName() << " because " << e.what() << std::endl;
 	}
 }
 
-// Sign Method
-void		Bureaucrat::signForm(Form& form)
+// Sign Form Method: Attempts to sign a form, catching and printing exceptions if the grade is too low
+void		Bureaucrat::signAForm(AForm& aform)
 {
 	try
 	{
-		form.beSigned(*this);
-		std::cout << this->_name << " signed " << form.getName() << std::endl;
+		aform.beSigned(*this);
+		std::cout << this->_name << " signed " << aform.getName() << std::endl;
 	}
 	catch (std::exception &e)
 	{
-		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+		std::cout << _name << " couldn't sign " << aform.getName() << " because " << e.what() << std::endl;
 	}
 }
 
-// Increment Method
+// Increment Method: Increases the Bureaucrat's grade (decreases the number), throwing exception if out of bounds
 void	Bureaucrat::incrementGrade()
 {
 	std::cout << "Incrementing Grade" << std::endl;
@@ -107,7 +107,7 @@ void	Bureaucrat::incrementGrade()
 	--_grade;
 }
 
-// Decrement Method
+// Decrement Method: Decreases the Bureaucrat's grade (increases the number), throwing exception if out of bounds
 void	Bureaucrat::decrementGrade()
 {
 	std::cout << "Decrementing Grade" << std::endl;
@@ -116,19 +116,19 @@ void	Bureaucrat::decrementGrade()
 	++_grade;
 }
 
-// High Grade Exception
+// High Grade Exception: Returns the error message when grade is above 1
 const char*	Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Grade is too high! Maximum is 1.");
 }
 
-// Low Grade Exception
+// Low Grade Exception: Returns the error message when grade is below 150
 const char*	Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low! Minimum is 150.");
 }
 
-// Override Insert Operator
+// Insertion Operator Overload: Prints Bureaucrat's details to the standard output stream
 std::ostream&	operator<<(std::ostream& os, const Bureaucrat& obj)
 {
 	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".";

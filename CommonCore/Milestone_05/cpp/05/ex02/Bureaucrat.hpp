@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:18:10 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/30 00:13:43 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/30 14:27:52 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <exception>
 # include <iostream>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -42,12 +42,12 @@ class Bureaucrat
 		int			getGrade() const;
 
 		// Methods
-		void 		executeForm(const AForm& form) const;
-		void		signForm(Form& form);
+		void 		executeAForm(const AForm& aform) const;
+		void		signAForm(AForm& aform);
 		void		incrementGrade();
 		void		decrementGrade();
 
-		// Exceptions (Nested Classes)
+		// Exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:

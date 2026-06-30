@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:18:41 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 02:13:20 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:17:14 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Bureaucrat;
 class AForm
 {
 	private:
-		// Attributes
 		const std::string	_name;
 		bool				_isSigned;
 		const int			_gradeToSign;

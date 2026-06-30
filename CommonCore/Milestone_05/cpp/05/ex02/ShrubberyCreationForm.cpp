@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:19:37 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 13:46:05 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:23:45 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,43 +15,42 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-
-// Default Constructor
+// Default Constructor: Initializes the base AForm and sets a default target
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("Shrubbery", 145, 137), _target("Default")
 {
 	std::cout << "Default Constructor: Shrubbery" << std::endl;
 }
 
-// Copy Constructor
+// Copy Constructor: Copies the base AForm and the specific target
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other) : AForm(other), _target(other._target)
 {
 	std::cout << "Copy Constructor: Shrubbery" << std::endl;
 }
 
-// Copy Assignment Operator
-ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
+// Copy Assignment Operator: Assigns the base values and the target using polymorphism
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
 {
 	if (this != &other)
 	{
-		AForm::operator=(other); // DÚVIDA: Não entendi a sintexe (other)
+		AForm::operator=(other);
 		this->_target = other._target;
 	}
 	return (*this);
 }
 
-// Destructor
+// Destructor: Cleans up the Shrubbery object
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 	std::cout << "Destructor: Shrubbery" << std::endl;
 }
 
-// Parametrized Constructor
+// Parametrized Constructor: Creates a Shrubbery form passing fixed grades to base class and a custom target
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target) : AForm("Shrubbery", 145, 137), _target(target)
 {
 	std::cout << "Parametrized Constructor: Shrubbery" << std::endl;
 }
 
-// Virtual Pure Method from Base Class
+// Execute Override: Validates requirements and generates an ASCII tree file if successful
 void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
 {
 	// 1. Check AForm Requirements

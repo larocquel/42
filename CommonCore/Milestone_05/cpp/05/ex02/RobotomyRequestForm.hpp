@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 22:19:51 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 14:36:58 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:25:50 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ class RobotomyRequestForm : public AForm
 
 		// Virtual Pure Method from Base Class
 		void	execute(const Bureaucrat& executor) const;
+
+		// Auxiliar Method to print
 		void	printRobot() const;
 };
 
