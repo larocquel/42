@@ -6,14 +6,15 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 17:25:24 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/07/02 16:34:06 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/07/02 16:58:51 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // main.cpp
 
-#include "Intern.hpp"
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
+#include "AForm.hpp"
 
 int	main()
 {
@@ -24,14 +25,20 @@ int	main()
 	Intern		manel;
 
 	// 3. Valid form
-	AForm*	validForm = manel.makeForm("robotomy request", ""); // Dúvida: Não entendi o que é o target, eu digo o que ele significa
+	AForm*	validForm = manel.makeForm("robotomy request", "Marvin");
 
 	// 4. Invalid form
-	AForm*	invalidForm = manel.makeForm("Invalid request", "");
+	AForm*	invalidForm = manel.makeForm("Invalid request", "Wall-E");
 
 	// 5. Sign and Execute
-	rui.signAForm(validForm);
-	rui.executeAForm(validForm);
+	if (validForm != NULL)
+	{
+		rui.signAForm(*validForm);
+		rui.executeAForm(*validForm);
+	}
+
+	delete validForm;
+	delete invalidForm;
 
 	return (0);
 }

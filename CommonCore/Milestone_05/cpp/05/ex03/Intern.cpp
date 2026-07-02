@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 17:25:06 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/07/02 15:58:45 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/07/02 18:19:22 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ Intern::Intern()
 
 Intern::Intern(const Intern& other)
 {
+	(void)other;
 	std::cout << "Copy Constructor: Intern" << std::endl;
 }
 
 Intern&	Intern::operator=(const Intern& other)
 {
+	(void)other;
 	return (*this);
 }
 
@@ -61,7 +63,7 @@ AForm*	Intern::makeForm(const std::string& formName, const std::string& formTarg
 	}
 
 	// 4. Error
-	std::cout << "Error: Unknown form" << std::endl;
+	std::cout << "Error: Unknown form, try with a valid form" << std::endl;
 
 	return (NULL);
 }
