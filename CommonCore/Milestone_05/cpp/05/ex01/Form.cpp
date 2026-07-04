@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 20:34:59 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/29 02:24:32 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/07/04 14:33:10 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/07/04 16:40:36 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@
 #include "Bureaucrat.hpp"
 
 // Default Constructor
-Form::Form() : _name("Default"), _isSigned(false), _gradeToSign(150), _gradeToExecute(150)
+Form::Form() : _name("Default"), _isSigned(false), _signGrade(150), _executeGrade(150)
 {
 	std::cout << "Default Constructor: Form" << std::endl;
 }
 
 // Copy Constructor
-Form::Form(const Form &other) : _name(other._name), _isSigned(other._isSigned), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute)
+Form::Form(const Form& other): _name(other._name), _isSigned(other._isSigned), _signGrade(other._signGrade), _executeGrade(other._executeGrade)
 {
 	std::cout << "Copy Constructor: Form" << std::endl;
 }
 
 // Copy Assignment Operator
-Form&	Form::operator=(const Form &other)
+Form&	Form::operator=(const Form& other)
 {
 	if (this != &other)
 	{
-		_isSigned = other._isSigned;
+		this->_isSigned = other._isSigned;
 	}
 	return (*this);
 }
@@ -44,72 +44,73 @@ Form::~Form()
 }
 
 // Parametrized Constructor
-Form::Form(const std::string &name, int gradeToSign, int gradeToExecute) : _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+Form::Form(const std::string& name, int signGrade, int executeGrade) : _name(name), _isSigned(false), _signGrade(signGrade), _executeGrade(executeGrade)
 {
 	std::cout << "Parametrized Constructor: Form" << std::endl;
-
-	if (_gradeToSign < 1 || _gradeToExecute < 1)
+	if (_signGrade < 1 || _executeGrade < 1)
 	{
-		throw Form::GradeTooHighException();
+		throw GradeTooHighException();
 	}
-	else if (_gradeToSign > 150 || _gradeToExecute > 150)
+	if (_signGrade > 150 || _executeGrade > 150)
 	{
-		throw Form::GradeTooLowException();
+		throw GradeTooLowException();
 	}
 }
 
 // Name Getter
-std::string	Form::getName() const
+std::string		Form::getName(void) const
 {
 	return (_name);
 }
 
 // isSigned Getter
-bool		Form::getIsSigned() const
+bool			Form::getIsSigned(void) const
 {
 	return (_isSigned);
 }
 
-// GradeisSigned Getter
-int			Form::getGradeToSign() const
+// signGrade Getter
+int				Form::getSignGrade(void) const
 {
-	return (_gradeToSign);
+	return (_signGrade);
 }
 
-// GradeExecute Getter
-int			Form::getGradeToExecute() const
+// executeGrade Getter
+int				Form::getExecuteGrade(void) const
 {
-	return (_gradeToExecute);
+	return (_executeGrade);
 }
 
-// Method
-void	Form::beSigned(const Bureaucrat& b)
+// beSigned Function
+void			Form::beSigned(const Bureaucrat& b)
 {
-	if (b.getGrade() <= _gradeToSign)
+	if (b.getGrade() <= this->_signGrade)
 	{
-		_isSigned = true;
+		this->_isSigned = true;
 	}
 	else
 	{
-		throw Form::GradeTooLowException();
+		throw (GradeTooLowException());
 	}
 }
 
-// High Grade Exception
-const char*	Form::GradeTooHighException::what() const throw()
+// Exceptions
+
+// High Grade
+const char*		Form::GradeTooHighException::what() const throw()
 {
-	return ("Grade is too high!");
+	return ("Grade Too High.");
 }
 
-// Low Grade Exception
-const char*	Form::GradeTooLowException::what() const throw()
+// Low Grade
+const char*		Form::GradeTooLowException::what() const throw()
 {
-	return ("Grade is too low!");
+	return ("Grade Too Low.");
 }
 
-// Override Insert Operator
+// Overload Insertion Operator
 std::ostream&	operator<<(std::ostream& os, const Form& obj)
 {
-	os << "Form: " << obj.getName() << " | Signed: " << (obj.getIsSigned() ? "yes" : "no") << " | Grade to sign: " << obj.getGradeToSign() << " | Grade to execute: " << obj.getGradeToExecute();
+	os << "Form: " << obj.getName() << " | Signed: " << (obj.getIsSigned() ? "yes" : "no") << " | Grade to sign: " << obj.getSignGrade() << " | Grade to execute: " << obj.getExecuteGrade();
 	return (os);
 }

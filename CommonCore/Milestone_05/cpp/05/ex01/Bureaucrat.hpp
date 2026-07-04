@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 20:33:47 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/27 22:14:18 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/07/04 14:32:37 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/07/04 16:36:20 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # define BUREAUCRAT_HPP
 
 # include <string>
-# include <exception>
 # include <iostream>
 
 class Form;
@@ -24,43 +23,46 @@ class Form;
 class Bureaucrat
 {
 	private:
-		std::string const	_name;
+		// Attributes
+		const std::string	_name;
 		int					_grade;
 
 	public:
-		// Ortodox Canonical Form
 		Bureaucrat();
-		Bureaucrat(const Bureaucrat &other);
-		Bureaucrat&	operator=(const Bureaucrat &other);
+		Bureaucrat(const Bureaucrat& other);
+		Bureaucrat&	operator=(const Bureaucrat& other);
 		~Bureaucrat();
 
 		// Parametrized Constructor
-		Bureaucrat(std::string const &name, int grade);
+		Bureaucrat(const std::string& name, int grade);
 
 		// Getters
-		std::string	getName() const;
-		int			getGrade() const;
+		std::string	getName(void) const;
+		int			getGrade(void) const;
 
-		// Methods
-		void		signForm(Form& form);
-		void		incrementGrade();
-		void		decrementGrade();
+		// Increment and Decrement Methods
+		void		incrementGrade(void);
+		void		decrementGrade(void);
 
-		// Exceptions (Nested Classes)
+		// Function
+		void signForm(Form& form);
+
+		// Exceptions
+
+		// High Grade Exception
 		class GradeTooHighException : public std::exception
 		{
-			public:
-				virtual const char* what() const throw();
+			virtual const char* what() const throw();
 		};
 
+		// Low Grade Exception
 		class GradeTooLowException : public std::exception
 		{
-			public:
-				virtual const char* what() const throw();
+			virtual const char* what() const throw();
 		};
 };
 
-// Override Operator <<
+// Overload Insertion
 std::ostream&	operator<<(std::ostream& os, const Bureaucrat& obj);
 
 #endif

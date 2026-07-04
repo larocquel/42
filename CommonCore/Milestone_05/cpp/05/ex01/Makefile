@@ -5,24 +5,24 @@
 #                                                     +:+ +:+         +:+      #
 #    By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/25 20:31:55 by leoaguia          #+#    #+#              #
-#    Updated: 2026/06/27 19:46:15 by leoaguia         ###   ########.fr        #
+#    Created: 2026/07/04 14:32:27 by leoaguia          #+#    #+#              #
+#    Updated: 2026/07/04 16:38:35 by leoaguia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Makefile
 
 # Executable
-NAME		= form
+NAME		=	form
 
 # Compilation
-CPP			= c++
-CPPFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CPP			=	c++
+CPPFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
 # Files & Objects
-SRCS		= main.cpp Bureaucrat.cpp Form.cpp
-OBJS_DIR	= objs/
-OBJS		= $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
+SRCS		=	main.cpp Bureaucrat.cpp Form.cpp
+OBJS_DIR	=	objs/
+OBJS		=	$(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
 
 # Rules
 

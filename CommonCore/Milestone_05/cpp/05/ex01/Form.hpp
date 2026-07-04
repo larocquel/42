@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 20:34:52 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/27 22:12:56 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/07/04 14:33:01 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/07/04 14:58:53 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,45 +24,47 @@ class Bureaucrat;
 class Form
 {
 	private:
+		// Attributes
 		const std::string	_name;
 		bool				_isSigned;
-		const int			_gradeToSign;
-		const int			_gradeToExecute;
+		const int			_signGrade;
+		const int			_executeGrade;
 
 	public:
 		// OCF
 		Form();
-		Form(const Form &other);
-		Form&	operator=(const Form &other);
+		Form(const Form& other);
+		Form&	operator=(const Form& other);
 		~Form();
 
 		// Parametrized Constructor
-		Form(const std::string &name, int gradeToSign, int gradeToExecute);
+		Form(const std::string& name, int signGrade, int executeGrade);
 
 		// Getters
-		std::string	getName() const;
-		bool		getIsSigned() const;
-		int			getGradeToSign() const;
-		int			getGradeToExecute() const;
+		std::string		getName(void) const;
+		bool			getIsSigned(void) const;
+		int				getSignGrade(void) const;
+		int				getExecuteGrade(void) const;
 
-		// Method
-		void		beSigned(const Bureaucrat& b);
+		// Functions
+		void	beSigned(const Bureaucrat& b);
 
 		// Exceptions
+
+		// High Grade
 		class GradeTooHighException : public std::exception
 		{
-			public:
-				virtual const char*	what() const throw();
+			virtual const char* what() const throw();
 		};
 
+		// Low Grade
 		class GradeTooLowException : public std::exception
 		{
-			public:
-				virtual const char* what() const throw();
+			virtual const char* what() const throw();
 		};
 };
 
-// Overload Insertion (<<) Operator
+// Overload Insertion Operator
 std::ostream&	operator<<(std::ostream& os, const Form& obj);
 
 #endif

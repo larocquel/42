@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 12:05:30 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/06/25 20:14:27 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/07/03 20:01:25 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/07/03 20:25:31 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,49 +15,49 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-# include <iostream>
 # include <string>
-# include <exception>
+# include <iostream>
 
 class Bureaucrat
 {
 	private:
-		std::string const	_name;
+		// Attributes
+		const std::string	_name;
 		int					_grade;
 
 	public:
-		// Ortodox Canonical Form
 		Bureaucrat();
-		Bureaucrat(const Bureaucrat &other);
-		Bureaucrat&	operator=(const Bureaucrat &other);
+		Bureaucrat(const Bureaucrat& other);
+		Bureaucrat&	operator=(const Bureaucrat& other);
 		~Bureaucrat();
 
 		// Parametrized Constructor
-		Bureaucrat(std::string const &name, int grade);
+		Bureaucrat(const std::string& name, int grade);
 
 		// Getters
-		std::string	getName() const;
-		int			getGrade() const;
+		std::string	getName(void) const;
+		int			getGrade(void) const;
 
-		// Methods
-		void		incrementGrade();
-		void		decrementGrade();
+		// Increment and Decrement Methods
+		void		incrementGrade(void);
+		void		decrementGrade(void);
 
-		// Exceptions (Nested Classes)
+		// Exceptions
+
+		// High Grade Exception
 		class GradeTooHighException : public std::exception
 		{
-			public:
-				virtual const char* what() const throw();
+			virtual const char* what() const throw();
 		};
 
+		// Low Grade Exception
 		class GradeTooLowException : public std::exception
 		{
-			public:
-				virtual const char* what() const throw();
+			virtual const char* what() const throw();
 		};
 };
 
-// Override Operator <<
+// Overload Insertion
 std::ostream&	operator<<(std::ostream& os, const Bureaucrat& obj);
 
 #endif
