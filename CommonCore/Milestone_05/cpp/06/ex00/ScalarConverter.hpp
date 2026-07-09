@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:11:17 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/07/08 23:11:40 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/07/09 02:38:38 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ScalarConverter
 	private:
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter& other);
-		ScalarConverter&	operator=(const ScalarConveter& other);
+		ScalarConverter&	operator=(const ScalarConverter& other);
 		~ScalarConverter();
 
 	public:
