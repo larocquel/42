@@ -6,7 +6,7 @@
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:11:17 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/07/09 02:38:38 by leoaguia         ###   ########.fr       */
+/*   Updated: 2026/07/10 00:54:40 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 class ScalarConverter
 {
 	private:
+		// OCF hidden so we cannot instanciate any class obj
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter& other);
 		ScalarConverter&	operator=(const ScalarConverter& other);
