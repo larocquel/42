@@ -5,30 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leoaguia <leoaguia@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/08 22:11:17 by leoaguia          #+#    #+#             */
-/*   Updated: 2026/07/10 00:54:40 by leoaguia         ###   ########.fr       */
+/*   Created: 2026/07/31 00:11:01 by leoaguia          #+#    #+#             */
+/*   Updated: 2026/07/31 00:24:49 by leoaguia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // ScalarConverter.hpp
 
-#ifndef SCALAR_CONVERTER_HPP
-# define SCALAR_CONVERTER_HPP
+#ifndef SCALARCONVERTER_HPP
+# define SCALARCONVERTER_HPP
 
-# include <string>
-# include <iostream>
+#include <string>
 
 class ScalarConverter
 {
 	private:
-		// OCF hidden so we cannot instanciate any class obj
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter& other);
 		ScalarConverter&	operator=(const ScalarConverter& other);
 		~ScalarConverter();
 
 	public:
-		// Static Method
 		static void	convert(const std::string& literal);
 };
 
