@@ -46,3 +46,6 @@
 [submodule "CommonCore/Exam/Rank_04"]
 	path = CommonCore/Exam/Rank_04
 	url = https://github.com/42-leoaguia/exam-rank-04.git
+[submodule "CommonCore/Milestone_04/cub3d"]
+	path = CommonCore/Milestone_04/cub3d
+	url = https://github.com/davmendo/42-cub3d.git
