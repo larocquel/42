@@ -1,0 +1,48 @@
+[submodule "CommonCore/Milestone_00/libft"]
+	path = CommonCore/Milestone_00/libft
+	url = https://github.com/42-leoaguia/libft.git
+[submodule "CommonCore/Milestone_01/ft_printf"]
+	path = CommonCore/Milestone_01/ft_printf
+	url = https://github.com/42-leoaguia/ft_printf.git
+[submodule "CommonCore/Milestone_01/get_next_line"]
+	path = CommonCore/Milestone_01/get_next_line
+	url = https://github.com/42-leoaguia/get_next_line.git
+[submodule "CommonCore/Milestone_02/minitalk"]
+	path = CommonCore/Milestone_02/minitalk
+	url = https://github.com/42-leoaguia/minitalk.git
+[submodule "CommonCore/Milestone_02/push_swap"]
+	path = CommonCore/Milestone_02/push_swap
+	url = https://github.com/42-leoaguia/push_swap.git
+[submodule "CommonCore/Milestone_02/so_long"]
+	path = CommonCore/Milestone_02/so_long
+	url = https://github.com/42-leoaguia/so_long.git
+[submodule "CommonCore/Milestone_03/minishell"]
+	path = CommonCore/Milestone_03/minishell
+	url = https://github.com/42-leoaguia/minishell.git
+[submodule "CommonCore/Milestone_03/philosophers"]
+	path = CommonCore/Milestone_03/philosophers
+	url = https://github.com/42-leoaguia/philosophers.git
+[submodule "CommonCore/Milestone_04/cpp"]
+	path = CommonCore/Milestone_04/cpp
+	url = https://github.com/42-leoaguia/cpp-milestone-04.git
+[submodule "CommonCore/Milestone_04/netpractice"]
+	path = CommonCore/Milestone_04/netpractice
+	url = https://github.com/42-leoaguia/netpractice.git
+[submodule "CommonCore/Exam/Rank_02"]
+	path = CommonCore/Exam/Rank_02
+	url = https://github.com/42-leoaguia/exam-rank-02.git
+[submodule "SideCore/1-Piscine"]
+	path = SideCore/1-Piscine
+	url = https://github.com/42-leoaguia/piscine-common-core.git
+[submodule "SideCore/2-Piscine_Reloaded"]
+	path = SideCore/2-Piscine_Reloaded
+	url = https://github.com/42-leoaguia/piscine-reloaded.git
+[submodule "SideCore/3-Piscine_Discovery"]
+	path = SideCore/3-Piscine_Discovery
+	url = https://github.com/42-leoaguia/piscine-discovery.git
+[submodule "CommonCore/Milestone_05/cpp"]
+	path = CommonCore/Milestone_05/cpp
+	url = https://github.com/42-leoaguia/cpp-milestone-05.git
+[submodule "CommonCore/Exam/Rank_04"]
+	path = CommonCore/Exam/Rank_04
+	url = https://github.com/42-leoaguia/exam-rank-04.git
