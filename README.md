@@ -24,15 +24,15 @@ This repository is a **monorepo** that consolidates all projects developed by me
 
 | Project | Description | Tech Stack | Grade |
 | :--- | :--- | :---: | :---: |
-| **[minishell](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_03/minishell)** | Simplified version of the Bourne-Again Shell (Bash). Done in partnership. | `C` `Bash` `UNIX` `AST` | 100/100 |
-| **[philosophers](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_03/philosophers)** | Implementation of the Dining Philosophers problem using multithreading and proper resource management. | `C` `Threads` `Mutexes` | 100/100 |
-| **[minitalk](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_02/minitalk)** | A small data exchange program that uses UNIX signals to communicate strings between a client and a server. | `C` `UNIX Signals` | ★ 115/100 |
-| **[so_long](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_02/so_long)** | A small 2D game where a character must collect all items on a map and reach the exit. | `C` `MiniLibX` `Game Dev` | 100/100 |
-| **[push_swap](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_02/push_swap)** | Implementation of an optimized sorting algorithm using two stacks with the minimum possible number of operations. | `C` `Algorithms` `Stacks` | ★ 125/100 |
+| **[minishell](https://github.com/42-leoaguia/minishell)** | Simplified version of the Bourne-Again Shell (Bash). Done in partnership. | `C` `Bash` `UNIX` `AST` | 100/100 |
+| **[philosophers](https://github.com/42-leoaguia/philosophers)** | Implementation of the Dining Philosophers problem using multithreading and proper resource management. | `C` `Threads` `Mutexes` | 100/100 |
+| **[minitalk](https://github.com/42-leoaguia/minitalk)** | A small data exchange program that uses UNIX signals to communicate strings between a client and a server. | `C` `UNIX Signals` | ★ 115/100 |
+| **[so_long](https://github.com/42-leoaguia/so_long)** | A small 2D game where a character must collect all items on a map and reach the exit. | `C` `MiniLibX` `Game Dev` | 100/100 |
+| **[push_swap](https://github.com/42-leoaguia/push_swap)** | Implementation of an optimized sorting algorithm using two stacks with the minimum possible number of operations. | `C` `Algorithms` `Stacks` | ★ 125/100 |
 | **born2beroot** | Setup and configuration of a virtual machine acting as a server, adhering to strict security policies. | `Debian` `VirtualBox` `Bash` | ★ 110/100 |
-| **[ft_printf](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_01/ft_printf)** | Recreation of the standard C library `printf` function, handling multiple format specifiers and conversions. | `C` `Variadic Funcs` | 100/100 |
-| **[get_next_line](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_01/get_next_line)** | A function that efficiently reads a line from a file descriptor using static buffers. | `C` `File I/O` | 100/100 |
-| **[libft](https://github.com/larocquel/42/tree/main/CommonCore/Milestone_00/libft)** | Custom C library re-implementing standard libc functions, including linked list manipulation. | `C` `Data Structures` | ★ 125/100 |
+| **[ft_printf](https://github.com/42-leoaguia/ft_printf)** | Recreation of the standard C library `printf` function, handling multiple format specifiers and conversions. | `C` `Variadic Funcs` | 100/100 |
+| **[get_next_line](https://github.com/42-leoaguia/get_next_line)** | A function that efficiently reads a line from a file descriptor using static buffers. | `C` `File I/O` | 100/100 |
+| **[libft](https://github.com/42-leoaguia/libft)** | Custom C library re-implementing standard libc functions, including linked list manipulation. | `C` `Data Structures` | ★ 125/100 |
 
 ---
 
